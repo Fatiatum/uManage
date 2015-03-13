@@ -481,3 +481,10 @@ a:after {
 	padding-left: 10px;
 	font-size: 25px;
 }
+
+/*CAROUSEL*/
+
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
