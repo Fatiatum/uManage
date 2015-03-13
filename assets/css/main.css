@@ -173,6 +173,7 @@ a:after {
 	text-align: center;
 }
 
+
 /* Dark Grey Wrap */
 #dg {
 	background: #e0e0e0;
@@ -373,6 +374,7 @@ a:after {
 			transition: all .1s ease-in-out;
 }
 
+
 /* Push the body after clicking the menu button */
 .body-push {
 	overflow-x: hidden;
@@ -462,4 +464,20 @@ a:after {
 .team a {
 	padding-right: 10px;
 	padding-left: 10px;
+}
+
+/* PROJECTS CONF */
+
+.projs {
+	padding-top: 20px;
+}
+
+.projs:hover {
+	background: white;
+}
+
+.projs a {
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 25px;
 }

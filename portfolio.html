@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <title>uManage</title>
 
@@ -19,7 +18,6 @@
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/Chart.js"></script>
 	<script src="assets/js/modernizr.custom.js"></script>
-	
 
 	
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -43,7 +41,7 @@
 			<h1 class="logo"><a href="index.html#home">uManage</a></h1>
 			<!--Site Pages-->
 			<a href="#home" class="smoothScroll">Home</a>
-			<a href="#portfolio" class="smoothScroll">Portfolio</a>
+			<a href="#proj"s class="smoothScroll">Portfolio</a>
 			<a href="#contact" class="smoothScroll">Contact</a>
 			<!--Social network icons-->
 			<a href="#"><i class="icon-facebook"></i></a>
@@ -77,7 +75,11 @@
 	
 	
 	<!-- ========== MAIN GREY SECTION ========== -->
-	<section id="portfolio" name="portfolio"></section>
+
+
+
+
+	<section id="projs" name="projs"></section>
 	<div id="g">
 		<div class="container">
 			<div class="row">
@@ -86,56 +88,35 @@
 				<br>
 				<div class="col-lg-2"></div>
 				<div class="col-lg-8">
+				<p> -- PORTFOLIO INTRO TEXT -- </p> 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lectus elit, tincidunt nec turpis sed, accumsan iaculis ipsum. Nulla at augue auctor, tristique erat in, ultricies nunc. Mauris eget metus leo. Ut in mi lacinia, mattis nisl non, ultrices risus. Vestibulum aliquet aliquam ipsum ut ullamcorper. Pellentesque fringilla, massa vel rutrum consequat, nulla velit fermentum dolor, sed scelerisque.</p>
 				<br>
 				<br>
 				</div>
 				<div class="col-lg-2"></div>
-				<div class="col-lg-3 team">
+				<div class="col-lg-3 projs">
 					<img class="img-circle" src="assets/img/team01.jpg" height="90" width="90">
-					<h4>Ana Rita Ferreira</h4>
+					<p><br><a id="proj_link" href="index.html#">PROJECT</a></p>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-google-plus"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
-
-					</p>
 				</div>
 
-				<div class="col-lg-3 team">
+				<div class="col-lg-3 projs">
 					<img class="img-circle" src="assets/img/team02.jpg" height="90" width="90">
-					<h4>Duarte Brandão</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-google-plus"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
 
-					</p>
+					<p><br><a id="proj_link" href="index.html#">PROJECT</a></p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 				</div>
 
-				<div class="col-lg-3 team">
+				<div class="col-lg-3 projs">
 					<img class="img-circle" src="assets/img/team03.jpg" height="90" width="90">
-					<h4>Jorge Filipe Teixeira</h4>
+					<p><br><a id="proj_link" href="index.html#">PROJECT</a></p>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-google-plus"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
-
-					</p>
 				</div>
 
-				<div class="col-lg-3 team">
+				<div class="col-lg-3 projs">
 					<img class="img-circle" src="assets/img/team04.jpg" height="90" width="90">
-					<h4>Maria Miranda</h4>
+					<p><br><a id="proj_link" href="index.html#">PROJECT</a></p>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-google-plus"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
-					</p>
 				</div>
 			</div>
 		</div><!-- /container -->
@@ -176,6 +157,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+	    $('.carousel').carousel({
+	        interval: 3000
+	    })
+	</script>
 	<script src="assets/js/classie.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
