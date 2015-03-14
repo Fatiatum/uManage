@@ -1,3 +1,16 @@
 toDo
 
-- size dos links do portfolio.html
+portfolio
+
+	- Mudar imagens e nomes
+	- Rever ficheiros necessarios à página de portfolio e apagar o que desnecessario
+	- Mudar CSS
+	- Rever sistema de filtragem
+	- Por um background no wraper talvez
+	
+
+index
+	
+	- Mudar nav bar e testar diferentes possibilidades
+	- Adicionar elemento de perfil pessoal
+	- Adicionar campo de registo e log in

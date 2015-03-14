@@ -186,9 +186,10 @@ a:after {
 
 #f {
 	background: #2f2f2f;
-	padding-top: 70px;
-	padding-bottom: 70px;
-	text-align: center
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	min-height: 100px;
 }
 
 #f h3 {
@@ -201,19 +202,6 @@ a:after {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
-/* Copyright Wrap */
-
-#c {
-	background: #222222;
-	padding-top: 15px;
-	text-align: right;
-}
-
-#c p {
-	color: white
-}
-
 
 /* item Wrap */
 
@@ -487,4 +475,18 @@ a:after {
 .carousel-control {
   padding-top:10%;
   width:5%;
+}
+
+#carous{
+	background-color: rgba(50,50,50,0.3);
+}
+
+
+/*Portfolio page*/
+#port{
+	text-align: center;
+}
+
+#header_title{
+	text-align: left;
 }
