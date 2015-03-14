@@ -1,16 +1,27 @@
 toDo
 
-portfolio
+--------------------------------------
 
-	- Mudar imagens e nomes
-	- Rever ficheiros necessarios à página de portfolio e apagar o que desnecessario
-	- Mudar CSS
-	- Rever sistema de filtragem
-	- Por um background no wraper talvez
+Pages
 	
+	- Index
+	- Portfolio
+	- Profile
+	- Register
+	- Log in
+	- Fórum
+	- Project Board
+	- My Projects
 
-index
+--------------------------------------
+
+Index
 	
-	- Mudar nav bar e testar diferentes possibilidades
+	- Adicionar sombra a Contactos na nav bar
 	- Adicionar elemento de perfil pessoal
 	- Adicionar campo de registo e log in
+
+Portfolio
+
+	- Mudar imagens e nomes
+	- Adicionar sistema de filtragem/pesquisa	

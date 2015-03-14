@@ -14,8 +14,9 @@
 	
 	<!-- Custom styles for this template -->
 	<link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/css/scrolling-nav.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	
+
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/Chart.js"></script>
 	<script src="assets/js/modernizr.custom.js"></script>
@@ -30,42 +31,68 @@
       <![endif]-->
   </head>
 
-  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+  <body data-spy="scroll" data-target=".navbar-fixed-top">
 
   	<!-- ========= MENU SIDE-BAR ============ -->
+  	<!--
   	<nav class="menu" id="theMenu">
 
-  		<!-- Menu button -->
+  		<!++ Menu button ++>
   		<div id="menuToggle"><i class="icon-reorder"></i></div>
   		<div class="menu-wrap">
   			<h1 class="logo"><a href="index.html#home">uManage</a></h1>
-  			<!--Site Pages-->
+  			<!++ Site Pages ++>
   			<a href="#home" class="smoothScroll">Home</a>
   			<a href="#tools" class="smoothScroll">Tools</a>
   			<a href="#portfolio" class="smoothScroll">Projects</a>
   			<a href="#about" class="smoothScroll">About</a>
   			<a href="#contact" class="smoothScroll">Contact</a>
-  			<!--Social network icons-->
+  			<!++ Social network icons ++>
   			<a href="#"><i class="icon-facebook"></i></a>
   			<a href="#"><i class="icon-twitter"></i></a>
   			<a href="#"><i class="icon-google-plus"></i></a>
   			<a href="#"><i class="icon-envelope"></i></a>
   		</div>
-  	</nav>
+  	</nav> -->
+
+  	<!-- ========= NAVIGATION BAR ============ -->
+    <nav id="nav_bar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="Title" class="navbar-brand page-scroll" href="#home">uManage</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id ="nav_content" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul  class="nav navbar-nav ">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden"><a class="page-scroll" href="#home"></a></li>
+                    <li><a class="page-scroll" href="#tools">Tools</a></li>
+                    <li><a class="page-scroll" href="#portfolio">Projects</a></li>
+                    <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#cont">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
   	<!-- ========== HEADER SECTION ========== -->
   	<section id="home" name="home"></section>
   	<div id="headerwrap">
   		<div class="container">
   			<br>
-  			<!--<h1 style="color:#505050">uManage</h1>-->
   			<h1>uManage</h1>
   			<h2>Free project management tool</h2>
-  			<!--<h2 style="color:#696969">Free project management tool</h2>-->
   			<div class="row">
-  				<br>
-  				<br>
-  				<br>
+  				<br><br><br>
   				<div class="col-lg-6 col-lg-offset-3">
   				</div>
   			</div>
@@ -204,19 +231,6 @@
   			</div>	
   		</div><!-- /container -->
   	</div><!-- /carousel -->
-
-  	<!-- ========== PHRASE WHITE SECTION ========== -->
-	<!--
-	<div id="w">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h3>WE WORK HARD TO DELIVER A <bold>HIGH QUALITY SERVICE</bold>. OUR AIM IS YOUR COMPLETE <bold>SATISFACTION</bold>.
-				</h3>
-				</div>
-			</div>
-		</div>
-	</div>-->
 	
 	<!-- ========== ABOUT US GREY SECTION ========== -->
 	<section id="about" name="about"></section>
@@ -284,7 +298,7 @@
 	</div><!-- /g -->
 	
 	<!-- ========== FOOTER SECTION ========== -->
-	<section id="contact" name="contact"></section>
+	<section id="cont" name="contact"></section>
 	<div id="f">
 		<div class="container">
 			<div class="row">
@@ -309,16 +323,18 @@
 					<br>
 				</div>
 			</div>
-		</div>
-	</div><!-- /container -->
-</div><!-- /f -->
+		</div><!-- /container -->
+	</div><!-- /f -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/classie.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
 </body>
 </html>
