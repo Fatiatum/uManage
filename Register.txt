@@ -1,0 +1,8 @@
+Register
+
+	- http://www.prepbootstrap.com/bootstrap-template/registration-form
+	- http://bootsnipp.com/snippets/featured/basic-register-page
+	- http://bootsnipp.com/snippets/featured/login-amp-signup-forms-in-panel
+	- http://bootsnipp.com/snippets/featured/google-style-login
+	- http://bootsnipp.com/snippets/featured/loginregister-in-tabbed-interface
+	- http://themeandphoto.com/bootstrap-registration-page-example/
