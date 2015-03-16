@@ -607,3 +607,24 @@ p.text-left{
   margin-top:10px;
   margin-bottom:10px;
 }
+
+#ser-btn{
+	padding-top: 10px;
+}
+
+#search-bar{
+	margin-bottom: 75px;
+	margin-top: 25px;
+}
+
+#search-bar input{
+	width:550px;
+	height: 70px;
+	font-size: 25px;
+}
+
+#search-bar button{
+	height: 70px;
+	width: 70px;
+	font-size: 20px;
+}
