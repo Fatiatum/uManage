@@ -12,9 +12,9 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link href="assets/css/sb-admin.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/Chart.js"></script>
 	<script src="assets/js/modernizr.custom.js"></script>
@@ -29,9 +29,11 @@
     <![endif]-->
   </head>
 
- <body  data-spy="scroll" data-offset="0" data-target="#theMenu">
+ <body id="proj-body" data-spy="scroll" data-offset="0" data-target="#theMenu">
 
-    <!-- Navigation -->
+    <div id="wrapper">
+
+        <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
             <!-- Top Menu Items -->
@@ -45,7 +47,6 @@
                     </button>
                     <a id="Title" class="navbar-brand page-scroll" href="#home">uManage</a>
                 </div>
-
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div id ="nav_content" class="collapse navbar-collapse navbar-ex1-collapse">
@@ -119,197 +120,109 @@
                 <!-- /.navbar-collapse -->
             </div>
             <!-- Top Menu Items -->
-        </nav>
 
-	<!-- ========== HEADER SECTION ========== -->
-	<section id="home" name="home"></section>
-	<div id="portwrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-lg-offset-3">
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-
-
-    <!-- Page Content -->
-    <div id= "port" class="container">
-
-        <!-- Page Header -->
-        <div id= "header_title"class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Projects
-                    <br>
-                    <small style="padding-left: 15px">   All uR projects and public projects</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id="side-bar" class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="#">1</a>
+                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Project Board</a>
                     </li>
                     <li>
-                        <a href="#">2</a>
+                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Fórum</a>
                     </li>
                     <li>
-                        <a href="#">3</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Tools <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
+                    <li >
+                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Notifications</a>
                     </li>
                 </ul>
             </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <!-- ========== HEADER SECTION ========== -->
+            <section id="home" name="home"></section>
+            <div id="portwrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3">
+                        </div>
+                    </div>
+                </div><!-- /container -->
+            </div><!-- /headerwrap -->
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                    <div class="col-sm-4">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Done
+                                    <button type="button" id="plus-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    </button>
+                                </h3>
+                            </div>
+                            <div  class="panel-body">
+                                <div class="panel panel-default">
+                                <div id="task" class="panel-heading">
+                                    <h3 class="panel-title">Task #1</h3>
+                                </div>
+                                <div class="panel-body">
+                                    Description
+                                </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-sm-4 -->
+                    <div class="col-sm-4">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">In Progress <button type="button" id="plus-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                 <span class="caret"></span></button></h3>
+                            </div>
+                            <div class="panel-body">
+                                Panel content
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-sm-4 -->
+                    <div class="col-sm-4">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">To Do
+                                    <button type="button" id="plus-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    </button>
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                Panel content
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            <!-- /.container-fluid -->
+
         </div>
-        <!-- /.row -->
-
-        <hr>
+        <!-- /#page-wrapper -->
     </div>
-    <!-- /.container -->
+    <!-- /#wrapper -->
 
-	<!-- ========== FOOTER SECTION ========== -->
-	<section id="contact" name="contact"></section>
-	<div id="f">
-		<div class="container">
-			<div class="row">
-					<h3><b>CONTACT US</b></h3>
-					<br>
-					<div class="col-lg-4">
-						<h3><b>Send Us A Message:</b></h3>
-						<h3></h3>
-						<br>
-					</div>
-					
-					<div class="col-lg-4">	
-					</div>
-					
-					<div class="col-lg-4">
-						<h3><b>Talk about us:</b></h3>
-						<p>
-							<a href="index.html#"><i class="icon-facebook"></i></a>
-							<a href="index.html#"><i class="icon-twitter"></i></a>
-							<a href="index.html#"><i class="icon-google-plus"></i></a>
-						</p>
-						<br>
-					</div>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /f -->
-	
-	
-
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

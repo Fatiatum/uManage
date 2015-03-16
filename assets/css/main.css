@@ -9,7 +9,7 @@
 
 body {
   background-color: #f2f2f2;
-    font-family: "Lato";
+    font-family: "Raleway";
     font-weight: 300;
     font-size: 16px;
     color: #555;
@@ -95,6 +95,28 @@ a:after {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+#portwrap{
+	background: url(../img/header-bg.jpg) no-repeat center top;
+	margin-top: -590px;
+	padding-top:20px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 700px;
+	margin-left: -140px;
+
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;	
 }
 
 #headerwrap h1 {
@@ -186,8 +208,6 @@ a:after {
 
 #f {
 	background: #2f2f2f;
-	padding-top: 70px;
-	padding-bottom: 70px;
 	text-align: center;
 }
 
@@ -477,6 +497,7 @@ a:after {
 
 #carous{
 	background-color: rgba(50,50,50,0.3);
+	color: black;
 }
 
 
@@ -503,7 +524,8 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 0;
+    	background-color: #575C65;
+        padding: 10px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -517,4 +539,44 @@ html {
 #Title{
 	font-size:25px;
 	padding-right: 30px;
+	color: white;
+	font-weight: bold;
+}
+
+#Title:hover{
+	color:#8DA1AC;
+}
+
+#nav_content ul li a{
+	color:white;
+}
+
+#nav_content ul li a:hover{
+	color:#8DA1AC;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+	background-color: #454952;
+}
+
+.navbar-nav{
+	float:right;
+}
+
+#proj-body{
+	background-color: white;
+}
+
+.container-fluid{
+	padding-right: 50px;
+	padding-top: 15px;
+}
+
+.btn{
+	padding: 1px 6px;
+	float: right;
+}
+
+.top-nav > .open > .dropdown-menu{
+	background-color: #575C65;
 }
