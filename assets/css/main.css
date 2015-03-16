@@ -580,3 +580,12 @@ html {
 .top-nav > .open > .dropdown-menu{
 	background-color: #575C65;
 }
+
+#cont-bar{
+	background-color: #575C65;
+}
+
+#projs-content{
+	margin-left:200px;
+	margin-top: 50px;
+}
