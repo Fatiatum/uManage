@@ -85,7 +85,7 @@ a:after {
 	background-position: center center;
 	min-height: 700px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -107,7 +107,7 @@ a:after {
 	min-height: 700px;
 	margin-left: -140px;
 
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -116,7 +116,7 @@ a:after {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;	
+    background-size: cover;
 }
 
 #headerwrap h1 {
@@ -144,7 +144,7 @@ a:after {
 	background-position: center bottom;
 	min-height: 600px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -212,7 +212,7 @@ a:after {
 }
 
 #f h3 {
-	color: white;	
+	color: white;
 }
 
 #f i {
@@ -233,7 +233,7 @@ a:after {
 	background-position: center center;
 	min-height: 500px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -346,7 +346,7 @@ a:after {
 .menu a > i {
 	float: left;
 	display: inline-block;
-	vertical-align: middle; 
+	vertical-align: middle;
 	text-align: left;
 	width: 25px;
 	font-size: 14px;
@@ -454,7 +454,7 @@ a:after {
 	cursor: pointer;
 	color: white;
 	background-color: #16a085;
-	
+
 }
 
 /* TEAM CONF */
@@ -627,4 +627,37 @@ p.text-left{
 	height: 70px;
 	width: 70px;
 	font-size: 20px;
+}
+
+div#Post{
+  background-color: rgba(145, 144, 145, 0.42);
+}
+
+.col-lg-3.User{
+  border-width: 2px;
+  padding:60px;
+  overflow:visible;
+}
+
+.User>p {
+  padding-top:5px;
+}
+
+.User>img{
+  display:inline;
+}
+
+
+
+
+#postTitle {
+  padding:10px;
+  border-bottom-style: solid;
+  border-color:black;
+  border-bottom:2px;
+}
+
+#postBody {
+  text-align: left;
+  margin: 13px;
 }
