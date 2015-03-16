@@ -661,3 +661,15 @@ div#Post{
   text-align: left;
   margin: 13px;
 }
+#loginbox, #signupbox{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#btns a{
+	margin-left: 20px;
+}
+
+#btn-fbsignup, #btn-ggsignup, #btn-login{
+	margin-bottom: 5px;
+}

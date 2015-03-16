@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
   <link rel="shortcut icon" href="assets/img/s1.ico">
 
   <title>uManage</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="assets/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/css/register.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="assets/css/sb-admin.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/Chart.js"></script>
-  <script src="assets/js/modernizr.custom.js"></script>
-  
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="assets/css/sb-admin.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/Chart.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+    
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
-      <![endif]-->
+    <![endif]-->
   </head>
-  <body data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- ========= NAVIGATION BAR ============ -->
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+   
+
+    <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
             <!-- Top Menu Items -->
@@ -45,8 +49,6 @@
                     </button>
                     <a id="Title" class="navbar-brand page-scroll" href="#home">uManage</a>
                 </div>
-            </div>
-            <!-- Top Menu Items -->
         </nav>
 
   <!-- ========== HEADER SECTION ========== -->
@@ -58,10 +60,10 @@
         </div>
       </div>
     </div><!-- /container -->
-</div><!-- /headerwrap -->
-<div id= "info" class="container">    
-                         
-            <div class="panel panel-info"  >
+  </div><!-- /headerwrap -->
+<div class="container"> 
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
                     <div class="panel-heading">
                         <div class="panel-title">Sign In</div>
                         <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
@@ -95,13 +97,17 @@
 
 
                                 <div style="margin-top:10px" class="form-group">
-                                    <!-- Button -->
-
-                                    <div class="col-sm-12 controls">
-                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
-                                      <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
-                                      <a id="btn-gglogin" href="#" class="btn btn-danger">Login with Google Account</a>
-
+                                                                            <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-ggsignup" type="button" class="btn btn-danger"><i class="icon-google-plus"></i>   Login with Google Account</button>
+                                    </div>
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    Login with Facebook</button>
+                                    </div> 
+                                    <div id="btns" class="col-sm-12 controls">
+                                      <a id="btn-login" href="profile.html" class="btn btn-success">Login  </a>
+                                        
+                                    <br>
                                     </div>
                                 </div>
 
@@ -122,7 +128,7 @@
 
                         </div>                     
                     </div>  
-        
+        </div>
         <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="panel panel-info">
                         <div class="panel-heading">
@@ -191,16 +197,9 @@
                                     </div>                                              
                                         
                                 </div>
-                                
-                                
-                                
                             </form>
                          </div>
                     </div>
-
-               
-               
-                
          </div> 
     </div>
 
@@ -241,6 +240,9 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/profile.js"></script>
 </body>
 </html>
  
