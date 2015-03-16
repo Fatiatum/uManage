@@ -892,19 +892,3 @@ footer {
     font-style: italic;
 }
 
-/* ----- FORUM PAGE ----- */
-
-.row.forum-header-item {
-  background-color: rgba(165,218,210,0.6);
-  vertical-align: text-middle;
-}
-
-.row.forum-item {
-  vertical-align: text-middle;
-}
-
-p.text-left{
-  vertical-align: middle;
-  margin-top:10px;
-  margin-bottom:10px;
-}
