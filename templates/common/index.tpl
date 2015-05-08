@@ -36,17 +36,17 @@
       <br>
       <br>
       <div class="col-lg-4">
-        <img src="{$BASE_URL}images/ideia.png">
+        <img src="{$BASE_URL}images/assets/ideia.png">
         <h4>ORGANIZE uR IDEIAS</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
       <div class="col-lg-4">
-        <img src="{$BASE_URL}images/work.png">
+        <img src="{$BASE_URL}images/assets/work.png">
         <h4>DIVIDE uR WORK</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
       <div class="col-lg-4">
-        <img src="{$BASE_URL}images/deadline.png">
+        <img src="{$BASE_URL}images/assets/deadline.png">
         <h4>MANAGE uR TIME</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
@@ -170,7 +170,7 @@
     </div>
     <div class="col-lg-2"></div>
     <div class="col-lg-3 team">
-      <img class="img-circle" src="{$BASE_URL}images/team01.jpg" height="90" width="90">
+      <img class="img-circle" src="{$BASE_URL}images/assets/team01.jpg" height="90" width="90">
       <h4>Ana Rita Ferreira</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
@@ -182,7 +182,7 @@
     </div>
 
     <div class="col-lg-3 team">
-      <img class="img-circle" src="{$BASE_URL}images/team02.jpg" height="90" width="90">
+      <img class="img-circle" src="{$BASE_URL}images/assets/team02.jpg" height="90" width="90">
       <h4>Duarte Brandão</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
@@ -194,25 +194,25 @@
     </div>
 
     <div class="col-lg-3 team">
-      <img class="img-circle" src="{$BASE_URL}images/team03.jpg" height="90" width="90">
+      <img class="img-circle" src="{$BASE_URL}images/assets/team03.jpg" height="90" width="90">
       <h4>Jorge Filipe Teixeira</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
-        <a href="index.html#"><i class="icon-facebook"></i></a>
-        <a href="index.html#"><i class="icon-google-plus"></i></a>
-        <a href="index.html#"><i class="icon-envelope"></i></a>
+        <a href="#"><i class="icon-facebook"></i></a>
+        <a href="#"><i class="icon-google-plus"></i></a>
+        <a href="#"><i class="icon-envelope"></i></a>
 
       </p>
     </div>
 
     <div class="col-lg-3 team">
-      <img class="img-circle" src="{$BASE_URL}images/team04.jpg" height="90" width="90">
+      <img class="img-circle" src="{$BASE_URL}images/assets/team04.jpg" height="90" width="90">
       <h4>Maria Miranda</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
-        <a href="index.html#"><i class="icon-facebook"></i></a>
-        <a href="index.html#"><i class="icon-google-plus"></i></a>
-        <a href="index.html#"><i class="icon-envelope"></i></a>
+        <a href="#"><i class="icon-facebook"></i></a>
+        <a href="#"><i class="icon-google-plus"></i></a>
+        <a href="#"><i class="icon-envelope"></i></a>
       </p>
     </div>
   </div>
