@@ -1,4 +1,4 @@
-{include file='common/navbar-register.tpl'}
+{include file='common/header.tpl'}
 
 <!-- ========== HEADER SECTION ========== -->
 <section id="home" name="home"></section>

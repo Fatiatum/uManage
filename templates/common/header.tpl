@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="{$BASE_URL}images/s1.ico">
+  <link rel="shortcut icon" href="{$BASE_URL}images/assets/s1.ico">
 
   <title>uManage</title>
 
@@ -36,6 +36,6 @@
     {if $USERNAME}
       {include file='common/navbar-logged-in.tpl'}
     {else}
-      {include file='common/navbar-index.tpl'}
+      {include file='common/navbar-register.tpl'}
     {/if}
   </nav>
