@@ -174,9 +174,9 @@
       <h4>Ana Rita Ferreira</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
-        <a href="index.html#"><i class="icon-facebook"></i></a>
-        <a href="index.html#"><i class="icon-google-plus"></i></a>
-        <a href="index.html#"><i class="icon-envelope"></i></a>
+        <a href="#"><i class="icon-facebook"></i></a>
+        <a href="#"><i class="icon-google-plus"></i></a>
+        <a href="#"><i class="icon-envelope"></i></a>
 
       </p>
     </div>
@@ -186,9 +186,9 @@
       <h4>Duarte Brandão</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
-        <a href="index.html#"><i class="icon-facebook"></i></a>
-        <a href="index.html#"><i class="icon-google-plus"></i></a>
-        <a href="index.html#"><i class="icon-envelope"></i></a>
+        <a href="#"><i class="icon-facebook"></i></a>
+        <a href="#"><i class="icon-google-plus"></i></a>
+        <a href="#"><i class="icon-envelope"></i></a>
 
       </p>
     </div>
