@@ -77,7 +77,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/header-bg.jpg) no-repeat center top;
+	background: url(../images/assets/header-bg.jpg) no-repeat center top;
 	margin-top: -10px;
 	padding-top:20px;
 	text-align:center;
@@ -98,7 +98,7 @@ a:after {
 }
 
 #portwrap{
-	background: url(../img/header-bg.jpg) no-repeat center top;
+	background: url(../images/assets/header-bg.jpg) no-repeat center top;
 	margin-top: -590px;
 	padding-top:20px;
 	text-align:center;
@@ -136,7 +136,7 @@ a:after {
 
 /* Portfolio Wrap */
 #portfoliowrap {
-	background: url(../img/extra.jpg) no-repeat center top;
+	background: url(../images/assets/extra.jpg) no-repeat center top;
 	margin-top: 0px;
 	padding-top:70px;
 	text-align:center;
@@ -225,7 +225,7 @@ a:after {
 /* item Wrap */
 
 #itemwrap {
-	background: url(../img/item-bg.jpg) no-repeat center top;
+	background: url(../images/assets/item-bg.jpg) no-repeat center top;
 	margin-top: 0px;
 	padding-top:70px;
 	text-align:center;
