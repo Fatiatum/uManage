@@ -29,7 +29,7 @@
     else $_SESSION['error_messages'][] = 'Error creating user';
 
     $_SESSION['form_values'] = $_POST;
-    header("Location: $BASE_URL" . 'pages/users/register.php');
+    header("Location: $BASE_URL" . 'pages/users/profile.php');
     exit;
   }
   //$_SESSION['success_messages'][] = 'User registered successfully';
