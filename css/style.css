@@ -162,7 +162,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 .navbar-brand {
 	width: 167px;
 	height: 106px;
-	background: url({$BASE_URL}images/assets/logo.png) left center no-repeat;
+	background: url(../images/assets/logo.png) left center no-repeat;
 	text-indent: -99999px;
 }
 
@@ -170,7 +170,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 
 .slider-container {
     margin: 0 auto;
-    background: #f8f8f8 url({$BASE_URL}images/assets/pattern.jpg) left top repeat;
+    background: #f8f8f8 url(../images/assets/pattern.jpg) left top repeat;
     -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
     -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
     box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
@@ -281,7 +281,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 
 .services-title {
 	margin-top: 40px;
-    background: url({$BASE_URL}images/assets/line.png) left center repeat-x;
+    background: url(../images/assets/line.png) left center repeat-x;
 }
 
 .services-title h2 {
@@ -337,7 +337,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 }
 
 .work-title {
-    background: url({$BASE_URL}images/assets/line.png) left center repeat-x;
+    background: url(../images/assets/line.png) left center repeat-x;
 }
 
 .work-title h2 {
@@ -399,7 +399,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 }
 
 .testimonials-title {
-    background: url({$BASE_URL}images/assets/line.png) left center repeat-x;
+    background: url(../images/assets/line.png) left center repeat-x;
 }
 
 .testimonials-title h2 {
@@ -464,7 +464,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 footer {
     margin: 0 auto;
     padding-bottom: 10px;
-    background: #f8f8f8 url({$BASE_URL}images/assets/pattern.jpg) left top repeat;
+    background: #f8f8f8 url(../images/assets/pattern.jpg) left top repeat;
     -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset; -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset; box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
 }
 
@@ -538,7 +538,7 @@ footer {
 .page-title-container {
     margin: 0 auto;
     padding: 30px 0 35px 0;
-    background: #f8f8f8 url({$BASE_URL}images/assets/pattern.jpg) left top repeat;
+    background: #f8f8f8 url(../images/assets/pattern.jpg) left top repeat;
     text-align: left;
     -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
     -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 -5px 15px 0 rgba(0,0,0,.05) inset;
@@ -607,7 +607,7 @@ footer {
 }
 
 .team-title {
-    background: url({$BASE_URL}images/assets/line.png) left center repeat-x;
+    background: url(../images/assets/line.png) left center repeat-x;
 }
 
 .team-title h2 {
