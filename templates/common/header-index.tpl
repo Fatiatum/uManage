@@ -52,7 +52,7 @@
           <li><a class="page-scroll" href="#portfolio">Projects</a></li>
           <li><a class="page-scroll" href="#about">About</a></li>
           <li><a class="page-scroll" href="#cont">Contact</a></li>
-          <li><a href="{$BASE_URL}pages/common/login.php">Log In</a></li>
+          <li><a href="{$BASE_URL}pages/users/register.php">Log In</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
