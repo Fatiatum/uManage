@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="assets/img/s1.ico">
+  <link rel="shortcut icon" href="{$BASE_URL}images/s1.ico">
 
   <title>uManage</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="assets/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/css/profile.css" rel="stylesheet">
+  <link href="{$BASE_URL}/css/bootstrap.css" rel="stylesheet">
+  <link href="{$BASE_URL}/css/profile.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="assets/css/sb-admin.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/Chart.js"></script>
-  <script src="assets/js/modernizr.custom.js"></script>
+  <link href="{$BASE_URL}/css/sb-admin.css" rel="stylesheet">
+  <link href="{$BASE_URL}/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="{$BASE_URL}/css/font-awesome.min.css">
+  <script src="{$BASE_URL}/javascript/jquery.min.js"></script>
+  <script src="{$BASE_URL}/javascript/Chart.js"></script>
+  <script src="{$BASE_URL}/javascript/modernizr.custom.js"></script>
 
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
