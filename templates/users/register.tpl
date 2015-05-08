@@ -53,7 +53,6 @@
             </div>
             <div id="btns" class="col-sm-12 controls">
               <a id="btn-login" class="btn btn-success">Login  </a>
-
               <br>
             </div>
           </div>
@@ -102,17 +101,23 @@
               <input type="text" class="form-control" name="firstname" placeholder="First Name">
             </div>
           </div>
+
           <div class="form-group">
             <label for="lastname" class="col-md-3 control-label">Last Name</label>
             <div class="col-md-9">
               <input type="text" class="form-control" name="lastname" placeholder="Last Name">
             </div>
           </div>
+
           <div class="form-group">
             <label for="password" class="col-md-3 control-label">Password</label>
             <div class="col-md-9">
-              <input type="password" class="form-control" name="passwd" placeholder="Password">
+              <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
+          </div>
+
+          <div class="form-group">
+            <label type="file" name="photo" class="col-md-3 control-label">Photo</label>
           </div>
 
           <div class="form-group">

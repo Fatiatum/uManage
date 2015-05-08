@@ -2,14 +2,14 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');
 
-  if (!$_POST['username'] || !$_POST['realname'] || !$_POST['password']) {
+  if (!$_POST['email'] || !$_POST['firstname'] || !$_POST['lastname'] || !$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'All fields are mandatory';
     $_SESSION['form_values'] = $_POST;
     header("Location: $BASE_URL" . 'pages/users/register.php');
     exit;
   }
 
-  $realname = strip_tags($_POST['realname']);
+  $firstname = strip_tags($_POST['firstname']);
   $username = strip_tags($_POST['username']);
   $password = $_POST['password'];
 
@@ -17,7 +17,7 @@
   $extension = end(explode(".", $photo["name"]));
 
   try {
-    createUser($realname, $username, $password);
+    createUser($firstname, $username, $password);
     move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $username . '.' . $extension); // this is dangerous
     chmod($BASE_DIR . "images/users/" . $username . '.' . $extension, 0644);
   } catch (PDOException $e) {
