@@ -1,0 +1,32 @@
+.panel-info > .panel-heading{
+	background-color: #f2f2f2;
+	border-color: #f2f2f2;
+}
+
+.panel-title {
+color: #575C65;
+font-family: "Raleway";
+font-size: 30px;
+}
+
+.panel-info{
+	border-color: #FAFAF9; 
+
+}
+
+.checkbox{
+	font-family: "Raleway";
+	font-size: 15px;
+}
+
+#info{
+	max-width: 600px;
+	padding-top: 70px;
+	padding-bottom: 150px;
+}
+
+.btn{
+	margin-left: 10px;
+	height: 35px;
+	font-size: 15px;
+}

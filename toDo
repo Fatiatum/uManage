@@ -11,17 +11,33 @@ Pages
 	- Log in
 	- Fórum
 	- Project Board
-	- My Projects
 
 --------------------------------------
 
 Index
-	
-	- Adicionar sombra a Contactos na nav bar
-	- Adicionar elemento de perfil pessoal
-	- Adicionar campo de registo e log in
+
+	- Mudar imagens
 
 Portfolio
 
-	- Mudar imagens e nomes
-	- Adicionar sistema de filtragem/pesquisa	
+	- Mudar imagens
+
+Profile
+	
+	- Mudar imagens
+
+Register
+
+	- Feito
+
+Fórum
+	
+	- Tópicos abertos
+
+Projects
+
+	- Adicionar tools na barra lateral
+
+Admin
+	
+	- Adicionar tools na barra lateral

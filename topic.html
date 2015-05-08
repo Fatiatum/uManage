@@ -28,11 +28,11 @@
       <script src="assets/js/respond.min.js"></script>
       <![endif]-->
   </head>
-  <body data-spy="scroll" data-target=".navbar-fixed-top">
+<body data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- ========= NAVIGATION BAR ============ -->
-    <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
             <!-- Top Menu Items -->
             <div class="container">
@@ -102,10 +102,10 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> User <b class="caret"></b></a>
                             <ul  id= "cont-bar" class="dropdown-menu">
                                 <li>
-                                    <a href="#"><i class="icon-large icon-user"></i> Profile</a>
+                                    <a href="profile.html"><i class="icon-large icon-user"></i> Profile</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="icon-large icon-th"></i> Portfolio</a>
+                                    <a href="portfolio.html"><i class="icon-large icon-th"></i> Portfolio</a>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
@@ -120,16 +120,18 @@
             <!-- Top Menu Items -->
         </nav>
 
-  <!-- ========== HEADER SECTION ========== -->
-  <section id="home" name="home"></section>
-  <div id="portwrap">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-        </div>
-      </div>
-    </div><!-- /container -->
-  </div><!-- /headerwrap -->
+      <!-- ========== HEADER SECTION ========== -->
+      <section id="home" name="home"></section>
+      <div id="portwrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+            </div>
+          </div>
+        </div><!-- /container -->
+      </div><!-- /headerwrap -->
+
+
 
   <!-- Page Content -->
   <div id="port" class="container">
@@ -137,108 +139,102 @@
     <!-- Page Header -->
     <div id="header-title" class="row">
       <div class="col-lg-11">
-        <h1 class="page-header"><b>Forum</b></h1>
+        <h1 class="page-header"><b> Topic Name </b></h1>
         <div id="NewTopic" class="row">
           <div class="col-md-2"></div>
           <div class="col-md-2 col-md-offset-8">
-            <button class="btn btn-default" type="submit">New Topic</button>
+            <button class="btn btn-default" type="submit">Reply</button>
           </div>
           <div class="col-lg-11">
-            <p></p>
+          <p></p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Forum header -->
-    <div class="row forum-header-item">
-      <div class="col-md-6">
-        <p class="text-left">
-          <b>Topic Name</b>
-          </p>
-        </div>
-        <div class="col-md-2">
-          <p class="text-left">
-            <b>
-              Replies</b>
-            </p>
-          </div>
-          <div class="col-md-3">
-            <p class="text-left">
-              <b>
-                Last Post</b>
-              </p>
-            </div>
-          </div>
+    <div class="container">
+      <div id="Post" class="container">
+      <div class="row">
+        <div class="col-lg-3 User">
 
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <a href="topic.html"><p class="text-left">
-                Topic 1
-              </p></a>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                15
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
+          <p> Poster 1</p>
+          <img class="img-responsive" src="http://placehold.it/200x120" alt="">
+        </div>
+        <div class="col-lg-9">
+          <div id="postTitle">
+            <h3>Post Title</h3>
           </div>
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <p class="text-left">
-                Topic 1
-              </p>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                15
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
+          <div id="postBody">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, tristique sed augue quis, vestibulum sagittis metus. In nec ullamcorper neque, et cursus mi. Mauris ornare, sem eget consectetur convallis, odio felis faucibus neque, a ornare velit quam id lorem. Nunc non felis eu sem bibendum laoreet at ac lacus. Nulla pretium mauris eget orci mattis, at interdum mauris venenatis. </p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="Post" class="container">
+      <div class="row">
+        <div class="col-lg-3 User">
+
+          <p> Poster 3</p>
+          <img class="img-responsive" src="http://placehold.it/200x120" alt="">
+        </div>
+        <div class="col-lg-9">
+          <div id="postTitle">
+            <h3>Post Title</h3>
           </div>
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <p class="text-left">
-                Topic 2
-              </p>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                13
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
+          <div id="postBody">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, tristique sed augue quis, vestibulum sagittis metus. In nec ullamcorper neque, et cursus mi. Mauris ornare, sem eget consectetur convallis, odio felis faucibus neque, a ornare velit quam id lorem. Nunc non felis eu sem bibendum laoreet at ac lacus. Nulla pretium mauris eget orci mattis, at interdum mauris venenatis. </p>
           </div>
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <p class="text-left">
-                Topic 3
-              </p>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                19
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="Post" class="container">
+      <div class="row">
+        <div class="col-lg-3 User">
+
+          <p> Poster 2</p>
+          <img class="img-responsive" src="http://placehold.it/200x120" alt="">
+        </div>
+        <div class="col-lg-9">
+          <div id="postTitle">
+            <h3>Post Title</h3>
           </div>
+          <div id="postBody">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, tristique sed augue quis, vestibulum sagittis metus. In nec ullamcorper neque, et cursus mi. Mauris ornare, sem eget consectetur convallis, odio felis faucibus neque, a ornare velit quam id lorem. Nunc non felis eu sem bibendum laoreet at ac lacus. Nulla pretium mauris eget orci mattis, at interdum mauris venenatis. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <hr>
+    <div id="Post" class="container">
+      <div class="row">
+        <div class="col-lg-3 User">
+
+          <p> Poster 3</p>
+          <img class="img-responsive" src="http://placehold.it/200x120" alt="">
+        </div>
+        <div class="col-lg-9">
+          <div id="postTitle">
+            <h3>Post Title</h3>
+          </div>
+          <div id="postBody">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus quam, tristique sed augue quis, vestibulum sagittis metus. In nec ullamcorper neque, et cursus mi. Mauris ornare, sem eget consectetur convallis, odio felis faucibus neque, a ornare velit quam id lorem. Nunc non felis eu sem bibendum laoreet at ac lacus. Nulla pretium mauris eget orci mattis, at interdum mauris venenatis. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
 
           <hr>
 
@@ -275,45 +271,45 @@
           <hr>
 
         </div>
-        <!-- ========== FOOTER SECTION ========== -->
-        <section id="contact" name="contact"></section>
-        <div id="f">
-          <div class="container">
-            <div class="row">
-              <h3><b>CONTACT US</b></h3>
-              <br>
-              <div class="col-lg-4">
-                <h3><b>Send Us A Message:</b></h3>
-                <h3></h3>
-                <br>
-              </div>
-
-              <div class="col-lg-4">
-              </div>
-
-              <div class="col-lg-4">
-                <h3><b>Talk about us:</b></h3>
-                <p>
-                  <a href="index.html#"><i class="icon-facebook"></i></a>
-                  <a href="index.html#"><i class="icon-twitter"></i></a>
-                  <a href="index.html#"><i class="icon-google-plus"></i></a>
-                </p>
-                <br>
-              </div>
-            </div>
+          <!-- ========== FOOTER SECTION ========== -->
+  <section id="contact" name="contact"></section>
+  <div id="f">
+    <div class="container">
+      <div class="row">
+          <h3><b>CONTACT US</b></h3>
+          <br>
+          <div class="col-lg-4">
+            <h3><b>Send Us A Message:</b></h3>
+            <h3></h3>
+            <br>
           </div>
-        </div><!-- /container -->
-        <!-- /f -->
+          
+          <div class="col-lg-4">  
+          </div>
+          
+          <div class="col-lg-4">
+            <h3><b>Talk about us:</b></h3>
+            <p>
+              <a href="index.html#"><i class="icon-facebook"></i></a>
+              <a href="index.html#"><i class="icon-twitter"></i></a>
+              <a href="index.html#"><i class="icon-google-plus"></i></a>
+            </p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div><!-- /container -->
+  </div><!-- /f -->
 
 
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="assets/js/classie.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/smoothscroll.js"></script>
-        <script src="assets/js/main.js"></script>
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="assets/js/classie.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/smoothscroll.js"></script>
+      <script src="assets/js/main.js"></script>
 
 
-      </body></html>
+    </body></html>

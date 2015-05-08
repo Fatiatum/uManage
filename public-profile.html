@@ -1,4 +1,4 @@
-</b><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -11,6 +11,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/profile.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="assets/css/sb-admin.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
@@ -18,7 +19,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/Chart.js"></script>
   <script src="assets/js/modernizr.custom.js"></script>
-
+  
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
@@ -49,6 +50,16 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div id ="nav_content" class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul  class="nav navbar-right top-nav">
+                        <li>
+                            <div class="pull-right">
+                                <form class="navbar-form navbar-left" role="search">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                  </div>
+                                  <button type="submit" id="ser-btn" class="btn btn-default"><i class="icon-large icon-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="icon-large  icon-envelope"></i>
@@ -65,7 +76,7 @@
                                                     <strong>User</strong>
                                                 </h5>
                                                 <p class="small text-muted">
-                                                <i class="icon-large  icon-time"></i>
+                                                <i class="icon-large  icon-time"></i> 
                                                 Yesterday at 4:32 PM
                                                 </p>
                                                 <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -131,189 +142,94 @@
     </div><!-- /container -->
   </div><!-- /headerwrap -->
 
-  <!-- Page Content -->
-  <div id="port" class="container">
-
-    <!-- Page Header -->
-    <div id="header-title" class="row">
-      <div class="col-lg-11">
-        <h1 class="page-header"><b>Forum</b></h1>
-        <div id="NewTopic" class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-2 col-md-offset-8">
-            <button class="btn btn-default" type="submit">New Topic</button>
+      <div id ="info" class="container">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Jorge Teixeira</h3>
           </div>
-          <div class="col-lg-11">
-            <p></p>
+          <div class="panel-body">
+            <div class="row">
+              <div id ="profile-div" class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://bit.ly/1EeNkX0" class="img-circle"> </div>
+
+
+              <div class=" col-md-9 col-lg-9 "> 
+                <table class="table table-user-information">
+                  <tbody>
+                    <tr>
+                      <td>Username:</td>
+                      <td>@jorgefilipeteixeira</td>
+                    </tr>
+                    <tr>
+                      <td>Email</td>
+                      <td><a href="mailto:jorge_teixeira@gmail.com">jorge_teixeira@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                      <td>Gender:</td>
+                      <td>Male</td>
+                    </tr>
+                    <tr>
+                      <td>Member since:</td>
+                      <td>10/03/2015</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <a id="btn-message" data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+      
+
+      <!-- ========== FOOTER SECTION ========== -->
+  <section id="contact" name="contact"></section>
+  <div id="f">
+    <div class="container">
+      <div class="row">
+          <h3><b>CONTACT US</b></h3>
+          <br>
+          <div class="col-lg-4">
+            <h3><b>Send Us A Message:</b></h3>
+            <h3></h3>
+            <br>
+          </div>
+          
+          <div class="col-lg-4">  
+          </div>
+          
+          <div class="col-lg-4">
+            <h3><b>Talk about us:</b></h3>
+            <p>
+              <a href="index.html#"><i class="icon-facebook"></i></a>
+              <a href="index.html#"><i class="icon-twitter"></i></a>
+              <a href="index.html#"><i class="icon-google-plus"></i></a>
+            </p>
+            <br>
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- /container -->
+  </div><!-- /f -->
 
-    <!-- Forum header -->
-    <div class="row forum-header-item">
-      <div class="col-md-6">
-        <p class="text-left">
-          <b>Topic Name</b>
-          </p>
-        </div>
-        <div class="col-md-2">
-          <p class="text-left">
-            <b>
-              Replies</b>
-            </p>
-          </div>
-          <div class="col-md-3">
-            <p class="text-left">
-              <b>
-                Last Post</b>
-              </p>
-            </div>
-          </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/profile.js"></script>
+  </body>
+  </html>
 
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <a href="topic.html"><p class="text-left">
-                Topic 1
-              </p></a>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                15
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
-          </div>
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <p class="text-left">
-                Topic 1
-              </p>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                15
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
-          </div>
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <p class="text-left">
-                Topic 2
-              </p>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                13
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
-          </div>
-          <div class="row forum-item">
-            <div class="col-md-6">
-              <p class="text-left">
-                Topic 3
-              </p>
-            </div>
-            <div class="col-md-2">
-              <p class="text-left">
-                19
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="text-left">
-                Date of last Post
-              </p>
-            </div>
-          </div>
-
-          <hr>
-
-          <!-- Pagination -->
-          <div class="row text-center">
-            <div class="col-lg-12">
-              <ul class="pagination">
-                <li>
-                  <a href="#">«</a>
-                </li>
-                <li class="active">
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#">4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
-                </li>
-                <li>
-                  <a href="#">»</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-
-          <hr>
-
-        </div>
-        <!-- ========== FOOTER SECTION ========== -->
-        <section id="contact" name="contact"></section>
-        <div id="f">
-          <div class="container">
-            <div class="row">
-              <h3><b>CONTACT US</b></h3>
-              <br>
-              <div class="col-lg-4">
-                <h3><b>Send Us A Message:</b></h3>
-                <h3></h3>
-                <br>
-              </div>
-
-              <div class="col-lg-4">
-              </div>
-
-              <div class="col-lg-4">
-                <h3><b>Talk about us:</b></h3>
-                <p>
-                  <a href="index.html#"><i class="icon-facebook"></i></a>
-                  <a href="index.html#"><i class="icon-twitter"></i></a>
-                  <a href="index.html#"><i class="icon-google-plus"></i></a>
-                </p>
-                <br>
-              </div>
-            </div>
-          </div>
-        </div><!-- /container -->
-        <!-- /f -->
-
-
-
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="assets/js/classie.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/smoothscroll.js"></script>
-        <script src="assets/js/main.js"></script>
-
-
-      </body></html>
+  
