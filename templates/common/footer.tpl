@@ -6,16 +6,16 @@
       <div class="col-lg-6">
         <h3><b>Contact Us</b></h3>
         <p>
-          <a href="index.html#"><i class="icon-envelope"></i></a>
+          <a href="#"><i class="icon-envelope"></i></a>
         </p>
       </div>
 
       <div class="col-lg-6">
         <h3><b>Talk about us:</b></h3>
         <p>
-          <a href="index.html#"><i class="icon-facebook"></i></a>
-          <a href="index.html#"><i class="icon-twitter"></i></a>
-          <a href="index.html#"><i class="icon-google-plus"></i></a>
+          <a href="#"><i class="icon-facebook"></i></a>
+          <a href="#"><i class="icon-twitter"></i></a>
+          <a href="#"><i class="icon-google-plus"></i></a>
         </p>
         <br>
       </div>
