@@ -52,7 +52,7 @@
               <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    Login with Facebook</button>
             </div>
             <div id="btns" class="col-sm-12 controls">
-              <a id="btn-login" href="profile.html" class="btn btn-success">Login  </a>
+              <a id="btn-login" class="btn btn-success">Login  </a>
 
               <br>
             </div>
