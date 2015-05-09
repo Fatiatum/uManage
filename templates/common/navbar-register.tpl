@@ -7,6 +7,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a id="Title" class="navbar-brand page-scroll" href="pages/common/index.php">uManage</a>
+        <a id="Title" class="navbar-brand page-scroll" href="../common/index.php">uManage</a>
     </div>
 </div>

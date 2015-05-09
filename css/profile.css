@@ -64,7 +64,7 @@ table{
 }
 
 .panel-info{
-	border-color: #FAFAF9;    
+	border-color: #FAFAF9;
     width: 80%;
     margin: 0 auto;
 
@@ -99,4 +99,8 @@ table{
 #my-projs{
     margin-bottom: 150px;
     margin-top: -150px;
+}
+
+span#edit{
+margin-left: 95%;
 }

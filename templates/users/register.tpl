@@ -15,6 +15,24 @@
 
   <!-- ======= LOGIN BOX ====== -->
   <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+
+    <!-- Page Header -->
+    <div id= "error_msg"class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">
+          <div id="error_messages">
+            {foreach $ERROR_MESSAGES as $error}
+            <div class="error">{$error}<a class="close" href="#">X</a></div>
+            {/foreach}
+          </div>
+          <div id="success_messages">
+            {foreach $SUCCESS_MESSAGES as $success}
+            <div class="success">{$success}<a class="close" href="#">X</a></div>
+            {/foreach}
+          </div>
+        </h1>
+      </div>
+    </div>
     <div class="panel panel-info" >
       <div class="panel-heading">
         <div class="panel-title">Sign In</div>
@@ -46,14 +64,20 @@
           <div style="margin-top:10px" class="form-group">
             <!-- Button -->
             <div class="col-md-offset-3 col-md-9">
-              <button id="btn-ggsignup" type="button" class="btn btn-danger"><i class="icon-google-plus"></i>   Login with Google Account</button>
+              <button id="btn-ggsignup" type="button" class="btn btn-danger"><i class="icon-google-plus"></i>   
+                Login with Google Account
+              </button>
             </div>
             <div class="col-md-offset-3 col-md-9">
-              <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    Login with Facebook</button>
+              <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    
+                Login with Facebook
+              </button>
             </div>
-            <div id="btns" class="col-sm-12 controls">
-              <button id="btn-login" type="submit" class="btn btn-warning"> Login</button>
-              <br>
+            <div class="col-md-offset-3 col-md-9">
+              <button id="btn-login" type="submit" class="btn btn-warning">
+                Login
+              </button>
+              <span style="margin-left:8px;">or</span>
             </div>
           </div>
 
@@ -89,6 +113,13 @@
           </div>
 
           <div class="form-group">
+            <label for="username" class="col-md-3 control-label">Username</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>
+          </div>
+
+          <div class="form-group">
             <label for="email" class="col-md-3 control-label">Email</label>
             <div class="col-md-9">
               <input type="text" class="form-control" name="email" placeholder="Email Address">
@@ -96,19 +127,12 @@
           </div>
 
           <div class="form-group">
-            <label for="firstname" class="col-md-3 control-label">First Name</label>
+            <label for="firstname" class="col-md-3 control-label">Name</label>
             <div class="col-md-9">
-              <input type="text" class="form-control" name="firstname" placeholder="First Name">
+              <input type="text" class="form-control" name="name" placeholder="First Name">
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="lastname" class="col-md-3 control-label">Last Name</label>
-            <div class="col-md-9">
-              <input type="text" class="form-control" name="lastname" placeholder="Last Name">
-            </div>
-          </div>
-
+          
           <div class="form-group">
             <label for="password" class="col-md-3 control-label">Password</label>
             <div class="col-md-9">

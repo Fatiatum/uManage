@@ -673,3 +673,8 @@ div#Post{
 #btn-fbsignup, #btn-ggsignup, #btn-login{
 	margin-bottom: 5px;
 }
+
+#error_msg > div{
+	background-color: rgba(184, 29, 24, 0.75);
+  	border-radius: 25px;
+}

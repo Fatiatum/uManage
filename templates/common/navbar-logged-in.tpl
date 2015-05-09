@@ -6,7 +6,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a id="Title" class="navbar-brand page-scroll" href="pages/common/index.php">uManage</a>
+    <a id="Title" class="navbar-brand page-scroll" href="../common/index.php">uManage</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,14 +65,14 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> User <b class="caret"></b></a>
             <ul  id= "cont-bar" class="dropdown-menu">
               <li >
-                <a  href="#"><i class="icon-large icon-user"></i> Profile</a>
+                <a  href="{$BASE_URL}pages/users/profile.php"><i class="icon-large icon-user"></i> Profile</a>
               </li>
               <li class="active">
-                <a href="#"><i class="icon-large icon-th"></i> Portfolio</a>
+                <a href="{$BASE_URL}pages/common/portfolio.php"><i class="icon-large icon-th"></i> Portfolio</a>
               </li>
               <li class="divider"></li>
               <li>
-                <a href="#"><i class="icon-large icon-off"></i> Log Out</a>
+                <a href="{$BASE_URL}actions/users/logout.php"><i class="icon-large icon-off"></i> Log Out</a>
               </li>
             </ul>
           </li>

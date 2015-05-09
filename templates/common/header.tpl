@@ -12,7 +12,7 @@
   <!-- Bootstrap core CSS -->
   <link href="{$BASE_URL}/css/bootstrap.css" rel="stylesheet">
   <link href="{$BASE_URL}/css/profile.css" rel="stylesheet">
-
+  <link href="{$BASE_URL}/css/register.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="{$BASE_URL}/css/sb-admin.css" rel="stylesheet">
   <link href="{$BASE_URL}/css/main.css" rel="stylesheet">
@@ -33,9 +33,5 @@
 
 <body id="proj-body" data-spy="scroll" data-offset="0" data-target="#theMenu">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    {if $USERNAME}
-      {include file='common/navbar-logged-in.tpl'}
-    {else}
-      {include file='common/navbar-register.tpl'}
-    {/if}
+    {include file='common/navbar-logged-in.tpl'}
   </nav>

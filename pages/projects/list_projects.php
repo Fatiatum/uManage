@@ -14,12 +14,15 @@
 
   foreach ($projects as $key => $project) {
     unset($photo);
-    if (file_exists($BASE_DIR.'images/users/'.$project['username'].'.png'))
+    if (file_exists($BASE_DIR.'images/users/'.$project['name'].'.png'))
       $photo = 'images/users/'.$project['username'].'.png';
-    if (!$photo) $photo = 'images/assets/default.png';
+    if (file_exists($BASE_DIR.'images/users/'.$project['name'].'.jpg'))
+      $photo = 'images/users/'.$project['name'].'.jpg';
+    if (!$photo) $photo = 'images/assets/default_proj.png';
     $projects[$key]['photo'] = $photo;
   }
 
-  $smarty->assign('profile', $projects);
-  $smarty->display('profile/list_projects.tpl');
+  $smarty->assign('last_project_id', $projects[0]['id']);
+  $smarty->assign('projects', $projects);
+  $smarty->display('users/profile.tpl');
 ?>

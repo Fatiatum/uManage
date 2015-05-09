@@ -2,22 +2,22 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');
 
-  if (!$_POST['email'] || !$_POST['firstname'] || !$_POST['lastname'] || !$_POST['username'] || !$_POST['password']) {
+  if (!$_POST['email'] || !$_POST['name']  || !$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'All fields are mandatory';
     $_SESSION['form_values'] = $_POST;
     header("Location: $BASE_URL" . 'pages/users/register.php');
     exit;
   }
 
-  $firstname = strip_tags($_POST['firstname']);
+  $name = strip_tags($_POST['name']);
+  $email = strip_tags($_POST['email']);
   $username = strip_tags($_POST['username']);
   $password = $_POST['password'];
-
   $photo = $_FILES['photo'];
   $extension = end(explode(".", $photo["name"]));
 
   try {
-    createUser($firstname, $username, $password);
+    createUser($name, $email, $username, $password);
     move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $username . '.' . $extension); // this is dangerous
     chmod($BASE_DIR . "images/users/" . $username . '.' . $extension, 0644);
   } catch (PDOException $e) {
@@ -29,9 +29,9 @@
     else $_SESSION['error_messages'][] = 'Error creating user';
 
     $_SESSION['form_values'] = $_POST;
-    header("Location: $BASE_URL" . 'pages/users/profile.php');
-    exit;
+   // header("Location: $BASE_URL" . 'pages/users/register.php');
+   // exit;
   }
-  //$_SESSION['success_messages'][] = 'User registered successfully';
-  header('Location: pages/users/profile.php');
+  $_SESSION['success_messages'][] = 'User registered successfully';
+ // header("Location: $BASE_URL" . 'pages/users/profile.php');
 ?>
