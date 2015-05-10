@@ -2,7 +2,7 @@
 
 function createUser($name, $email, $username, $password) {
   global $conn;
-  $stmt = $conn->prepare("INSERT INTO users (nome, email, username, password, data_de_registo) VALUES (:name, :email, :username, :password, :data) ");
+  $stmt = $conn->prepare("INSERT INTO users (name, email, username, password, register_date) VALUES (:name, :email, :username, :password, :data) ");
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':email', $email);
   $stmt->bindParam(':username', $username);
