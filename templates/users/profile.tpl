@@ -77,6 +77,7 @@
  <div class="modal fade" id="register" role="dialog"> <!--RESGISTER MODAL-->
       <div class="modal-dialog">
         <div class="modal-content">
+          <form action="register.php" method="post" class="form-horizontal"><!--mudar-->
             <div class="modal-header">
                 <h3 id="modalLabel">Create New Project</h3>
             </div>
@@ -86,24 +87,28 @@
                   *Required field
                 </div>
                 <div class="form-group">
+                  <label for="proj-name" class="col-lg-2 control-label">*Name:</label>
                   <div class="col-lg-8">
                     <input id="name" name="name" type="text" class="col-md-6" placeholder="name">
                   </div>
                 </div>
 
                 <div class="form-group">
+                  <label for="proj-description" class="col-lg-2 control-label">*Description:</label>
                   <div class="col-lg-10">
                     <input id="description" name="description" type="text" class="col-md-6" placeholder="description">
                   </div>
                 </div>
 
                 <div class="form-group">
+                  <label for="proj-photo" class="col-lg-2 control-label">*Photo:</label>
                   <div class="col-lg-10">
                     <input id="photo" name="photo" type="file" class="col-md-10">
                   </div>
                 </div>
 
                 <div class="form-group">
+                  <label for="proj-visibility" class="col-lg-2 control-label">*Public:</label>
                   <div class="col-lg-10">
                       <input id="public" name="public" type="checkbox" class="col-md-10">
                   </div>
