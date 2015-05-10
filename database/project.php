@@ -2,11 +2,11 @@
   function getUserProjects($username) {
     global $conn;
     $userId = $conn->prepare("SELECT utilizadorID FROM
-                                    Utilizador USING(username)
+                                    users USING(username)
                                     WHERE username = ?");
     $userId->execute(array($username));
     $stmt = $conn->prepare("SELECT *
-                            FROM Utilizador JOIN
+                            FROM users JOIN
                                  JoinUtiilizadorToProjeto USING(userId)
                             ORDER BY dataCriacao DESC");
     $stmt->execute();
@@ -16,7 +16,7 @@
   function getAllProjects() {
     global $conn;
     $stmt = $conn->prepare("SELECT *
-                            FROM Projeto
+                            FROM project
                             ORDER BY dataCriacao DESC");
     $stmt->execute();
     return $stmt->fetchAll();

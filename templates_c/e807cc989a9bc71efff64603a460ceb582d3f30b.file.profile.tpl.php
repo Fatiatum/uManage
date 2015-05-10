@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-09 21:47:56
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-10 17:41:20
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:993304635554d42afbfa118-88726980%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e807cc989a9bc71efff64603a460ceb582d3f30b' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/profile.tpl',
-      1 => 1431200806,
+      1 => 1431272478,
       2 => 'file',
     ),
   ),
@@ -39,6 +39,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
   </div><!-- /container -->
 </div><!-- /headerwrap -->
+
 <div id="info" class="container">
   <div class="panel panel-info">
     <div class="panel-heading">
@@ -80,7 +81,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div id="my-projs" class="panel-projects">
   <div id="header_title" class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">My Projects</h1>
+      <div>
+        <h1 class="page-header">My Projects </h1>
+        <span style= "float: right" class="glyphicon glyphicon-plus" id="create_proj" aria-hidden="true"></span>
+      </div>
+      
     </div>
   </div>
   <div class="row">

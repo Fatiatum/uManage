@@ -1,5 +1,11 @@
 {include file='common/header.tpl'}
 
+<?php 
+    if(isset($_SESSION['username'])){
+    header("Location: $BASE_URL" . 'pages/users/profile.php');
+  }
+?>
+
 <!-- ========== HEADER SECTION ========== -->
 <section id="home" name="home"></section>
 <div id="portwrap">
@@ -15,24 +21,25 @@
 
   <!-- ======= LOGIN BOX ====== -->
   <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-
-    <!-- Page Header -->
-    <div id= "error_msg"class="row">
+ 
+    <!-- ERROR PANEL -->
+    <div class="row">
       <div class="col-lg-12">
         <h1 class="page-header">
           <div id="error_messages">
             {foreach $ERROR_MESSAGES as $error}
-            <div class="error">{$error}<a class="close" href="#">X</a></div>
+            <div class="error" id= "error-msg">{$error}<a class="close" href="#">X</a></div>
             {/foreach}
           </div>
           <div id="success_messages">
             {foreach $SUCCESS_MESSAGES as $success}
-            <div class="success">{$success}<a class="close" href="#">X</a></div>
+            <div class="success" id= "success-msg">{$success}<a class="close" href="#">X</a></div>
             {/foreach}
           </div>
         </h1>
       </div>
     </div>
+
     <div class="panel panel-info" >
       <div class="panel-heading">
         <div class="panel-title">Sign In</div>

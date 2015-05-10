@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-09 21:30:39
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-10 14:30:47
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1753530672554d3ed3c73976-16830517%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '52753cc228c72dd9887ced533cd456e9c692c200' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/header.tpl',
-      1 => 1431199804,
+      1 => 1431261044,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'BASE_URL' => 0,
+    'USERNAME' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -68,7 +69,12 @@ images/assets/s1.ico">
 
 <body id="proj-body" data-spy="scroll" data-offset="0" data-target="#theMenu">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <?php echo $_smarty_tpl->getSubTemplate ('common/navbar-logged-in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+    <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+      <?php echo $_smarty_tpl->getSubTemplate ('common/navbar-logged-in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+    <?php } else { ?>
+      <?php echo $_smarty_tpl->getSubTemplate ('common/navbar-register.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+    <?php }?>
   </nav>
 <?php }} ?>

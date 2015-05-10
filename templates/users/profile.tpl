@@ -10,6 +10,7 @@
     </div>
   </div><!-- /container -->
 </div><!-- /headerwrap -->
+
 <div id="info" class="container">
   <div class="panel panel-info">
     <div class="panel-heading">
@@ -51,7 +52,11 @@
 <div id="my-projs" class="panel-projects">
   <div id="header_title" class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">My Projects</h1>
+      <div>
+        <h1 class="page-header">My Projects </h1>
+        <span href= "" style= "float: right" class="glyphicon glyphicon-plus" id="create_proj" aria-hidden="true"></span>
+      </div>
+      
     </div>
   </div>
   <div class="row">

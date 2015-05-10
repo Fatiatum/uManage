@@ -1,12 +1,13 @@
 <?php
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/project.php');
-
-  if (!$_GET['username']) {
+  
+  if (!isset($_SESSION['username'])) {
     $_SESSION['error_messages'][] = 'Undefined username';
     header("Location: $BASE_URL");
     exit;
   }
+
   $username = $_GET['username'];
   $projects = getProjects($username);
 
@@ -23,4 +24,5 @@
   $smarty->assign('last_project_id', $projects[0]['id']);
   $smarty->assign('projects', $projects);
   $smarty->display('common/portfolio.tpl');
+  
 ?>

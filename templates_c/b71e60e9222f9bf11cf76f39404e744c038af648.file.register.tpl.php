@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-09 21:33:05
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-10 17:20:38
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:115962559554d3ed3bc78c2-53009619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b71e60e9222f9bf11cf76f39404e744c038af648' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/register.tpl',
-      1 => 1431199897,
+      1 => 1431271127,
       2 => 'file',
     ),
   ),
@@ -30,6 +30,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_554d3ed3c5c3a2_73764643')) {function content_554d3ed3c5c3a2_73764643($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
+<<?php ?>?php 
+    if(isset($_SESSION['username'])){
+    header("Location: $BASE_URL" . 'pages/users/profile.php');
+  }
+?<?php ?>>
+
 <!-- ========== HEADER SECTION ========== -->
 <section id="home" name="home"></section>
 <div id="portwrap">
@@ -45,9 +51,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
   <!-- ======= LOGIN BOX ====== -->
   <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-
-    <!-- Page Header -->
-    <div id= "error_msg"class="row">
+ 
+    <!-- ERROR PANEL -->
+    <div class="row">
       <div class="col-lg-12">
         <h1 class="page-header">
           <div id="error_messages">
@@ -56,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['error']->key => $_smarty_tpl->tpl_vars['error']->value) {
 $_smarty_tpl->tpl_vars['error']->_loop = true;
 ?>
-            <div class="error"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+            <div class="error" id= "error-msg"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 <a class="close" href="#">X</a></div>
             <?php } ?>
           </div>
@@ -66,13 +72,14 @@ $_smarty_tpl->tpl_vars['error']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['success']->key => $_smarty_tpl->tpl_vars['success']->value) {
 $_smarty_tpl->tpl_vars['success']->_loop = true;
 ?>
-            <div class="success"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
+            <div class="success" id= "success-msg"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
 <a class="close" href="#">X</a></div>
             <?php } ?>
           </div>
         </h1>
       </div>
     </div>
+
     <div class="panel panel-info" >
       <div class="panel-heading">
         <div class="panel-title">Sign In</div>

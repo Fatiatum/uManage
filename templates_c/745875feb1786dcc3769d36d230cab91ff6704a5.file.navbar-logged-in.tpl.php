@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-09 17:53:07
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-10 14:41:22
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/navbar-logged-in.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1581394078554d490fc2d5b4-18306105%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '745875feb1786dcc3769d36d230cab91ff6704a5' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/navbar-logged-in.tpl',
-      1 => 1431186653,
+      1 => 1431261669,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a id="Title" class="navbar-brand page-scroll" href="../common/index.php">uManage</a>
+    <a id="Title" class="navbar-brand page-scroll" href="../users/profile.php">uManage</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
