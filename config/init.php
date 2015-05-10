@@ -4,7 +4,7 @@
 
   error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
 
-  $BASE_DIR = '/opt/lbaw/lbaw1425/public_html/proto';
+  $BASE_DIR = '/opt/lbaw/lbaw1425/public_html/proto/';
   $BASE_URL = '/~lbaw1425/proto/';
 
   $conn = new PDO('pgsql:host=vdbm;dbname=lbaw1425', 'lbaw1425', 'fQ716tx3');
@@ -13,7 +13,7 @@
 
   $conn->exec('SET SCHEMA \'public\'');
 
-  include_once($BASE_DIR . '/lib/smarty/Smarty.class.php');
+  include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
 
   $smarty = new Smarty;
   $smarty->template_dir = $BASE_DIR . 'templates/';
