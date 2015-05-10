@@ -74,6 +74,55 @@
   </div>
 </div>
 
-<script>last_project_id = {$last_project_id}</script>
+ <div class="modal fade" id="register" role="dialog"> <!--RESGISTER MODAL-->
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalLabel">Create New Project</h3>
+            </div>
 
+            <div class="modal-body"> <!--USERNAME/EMAIL/PASSWORD/CONFIRM PASSWORD-->
+                <div>
+                  *Required field
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-8">
+                    <input id="name" name="name" type="text" class="col-md-6" placeholder="name">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-lg-10">
+                    <input id="description" name="description" type="text" class="col-md-6" placeholder="description">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-lg-10">
+                    <input id="photo" name="photo" type="file" class="col-md-10">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-lg-10">
+                      <input id="public" name="public" type="checkbox" class="col-md-10">
+                  </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">cancel</button>
+                <input name="sub" type="submit" class="btn btn-primary" value="submit">
+            </div>
+
+            
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+
+<script>last_project_id = {$last_project_id}</script>
 {include file='common/footer.tpl'}
