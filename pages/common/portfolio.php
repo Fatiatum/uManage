@@ -9,7 +9,7 @@
   }
 
   $username = $_GET['username'];
-  $projects = getProjects($username);
+  /*$projects = getProjects($username);
 
   foreach ($projects as $key => $project) {
     unset($photo);
@@ -22,7 +22,7 @@
   }
 
   $smarty->assign('last_project_id', $projects[0]['id']);
-  $smarty->assign('projects', $projects);
+  $smarty->assign('projects', $projects);*/
   $smarty->display('common/portfolio.tpl');
   
 ?>
