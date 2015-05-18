@@ -42,19 +42,15 @@
             <tbody>
               <tr>
                 <td>Username:</td>
-                <td>@jorgefilipeteixeira</td>
+                <td>{$user.username}</td>
               </tr>
               <tr>
                 <td>Email</td>
-                <td><a href="mailto:jorge_teixeira@gmail.com">jorge_teixeira@gmail.com</a></td>
-              </tr>
-              <tr>
-                <td>Gender:</td>
-                <td>Male</td>
+                <td><a href="mailto:jorge_teixeira@gmail.com">{$user.email}</a></td>
               </tr>
               <tr>
                 <td>Member since:</td>
-                <td>10/03/2015</td>
+                <td>{$user.register_date}</td>
               </tr>
             </tbody>
           </table>

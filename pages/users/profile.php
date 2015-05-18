@@ -9,7 +9,7 @@
   }
 
   $username = $_SESSION['username'];
-
+  $user = getUser();
   $projects = getUserProjects($username);
 
   foreach ($projects as $key => $project) {
@@ -22,6 +22,7 @@
     $projects[$key]['photo'] = $photo;
   }
 
+  $smarty->assign('user',$user);
   $smarty->assign('last_project_id', $projects[0]['id']);
   $smarty->assign('projects', $projects);
   $smarty->display('users/profile.tpl');

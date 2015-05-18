@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-09 00:55:10
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-18 12:49:32
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:455558122554d3eced73fb0-38357574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fb24ac7eb1a9b9fd20266c482527f090d33e9305' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/footer.tpl',
-      1 => 1431124182,
+      1 => 1431944652,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_554d3eceda0a52_96309311',
   'variables' => 
   array (
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_554d3eceda0a52_96309311',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_554d3eceda0a52_96309311')) {function content_554d3eceda0a52_96309311($_smarty_tpl) {?><!-- ========== CONTACTS SECTION ========== -->
 <section id="contact" name="contact"></section>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-11 00:10:01
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-18 12:51:10
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:993304635554d42afbfa118-88726980%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e807cc989a9bc71efff64603a460ceb582d3f30b' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/profile.tpl',
-      1 => 1431295794,
+      1 => 1431946264,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'ERROR_MESSAGES' => 0,
     'error' => 0,
+    'user' => 0,
     'projects' => 0,
     'BASE_URL' => 0,
     'project' => 0,
@@ -78,19 +79,18 @@ $_smarty_tpl->tpl_vars['error']->_loop = true;
             <tbody>
               <tr>
                 <td>Username:</td>
-                <td>@jorgefilipeteixeira</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+</td>
               </tr>
               <tr>
                 <td>Email</td>
-                <td><a href="mailto:jorge_teixeira@gmail.com">jorge_teixeira@gmail.com</a></td>
-              </tr>
-              <tr>
-                <td>Gender:</td>
-                <td>Male</td>
+                <td><a href="mailto:jorge_teixeira@gmail.com"><?php echo $_smarty_tpl->tpl_vars['user']->value['email'];?>
+</a></td>
               </tr>
               <tr>
                 <td>Member since:</td>
-                <td>10/03/2015</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['user']->value['register_date'];?>
+</td>
               </tr>
             </tbody>
           </table>
