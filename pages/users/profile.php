@@ -10,7 +10,15 @@
 
   $username = $_SESSION['username'];
   $user = getUser();
-  $projects = getUserProjects($username);
+  $projects = getUserProjects();
+
+  unset($user_photo);
+  if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.png'))
+      $user_photo = 'images/users/'.$user['username'].'.png';
+  if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.jpg'))
+      $user_photo = 'images/users/'.$user['username'].'.jpg';
+  if (!$user_photo) $user_photo = 'images/assets/default_user.png';
+  $user['photo'] = $user_photo;
 
   foreach ($projects as $key => $project) {
     unset($photo);

@@ -27,14 +27,16 @@
 <div id="info" class="container">
   <div class="panel panel-info">
     <div class="panel-heading">
-      <h3 class="panel-title ">Jorge Teixeira</h3>
+      <h3 class="panel-title ">{$user.name}</h3>
       <a href="#">
         <span style= "margin-left:95%" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
       </a>
     </div>
     <div class="panel-body">
       <div class="row">
-        <div id ="profile-div" class="col-md-3 col-lg-3 " align="left"> <img alt="User Pic" src="http://bit.ly/1EeNkX0" class="img-circle"> </div>
+        <div id ="profile-div" class="col-md-3 col-lg-3 " align="left"> 
+          <img src="{$BASE_URL}{$user.photo}" class="img-circle"> 
+        </div>
 
 
         <div class=" col-md-9 col-lg-9 ">
@@ -46,7 +48,7 @@
               </tr>
               <tr>
                 <td>Email</td>
-                <td><a href="mailto:jorge_teixeira@gmail.com">{$user.email}</a></td>
+                <td><a href="mailto:{$user.email}">{$user.email}</a></td>
               </tr>
               <tr>
                 <td>Member since:</td>
@@ -60,11 +62,11 @@
   </div>
 </div>
 
-<div id="my-projs" class="panel-projects">
+<section>
+  <h2>My Projects</h2>
   <div id="header_title" class="row">
     <div class="col-lg-12">
       <div>
-        <h1 class="page-header">My Projects </h1>
         <a href="#new_proj" data-toggle="modal">
           <span style= "float:right" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </a>
@@ -72,30 +74,21 @@
       
     </div>
   </div>
-  <!-- Projects Row -->
-  <div class="row">
-    {foreach $projects as $project}
-    <div class="col-md-4 portfolio-item">
-    <!--
-    <a href="#">
-      <img class="img-responsive" src="{$BASE_URL}{$project.photo}" alt="">
-    </a>
-  -->
-  <h3>
-  <a class="name" href="{$BASE_URL}pages/projects/list_projects.php?name={$project.name}" class="name">{$project.name}</a>
-  </h3>
-    <!--
-    <div class="project-description">{$project.text}</div>
-  -->
-</div>
-{/foreach}
-</div>
-<!-- /.row -->
 
-</div>
+  {foreach $projects as $project}
+
+  <article>
+    <img src="{$BASE_URL}{$project.photo}">
+    <a href="{$BASE_URL}pages/projects/project.php?name={$project.name}">@{$project.name}</a>
+    <div>{$project.description}</div>
+  </article>
+
+  {/foreach}
+
+</section>
 
 
-<div class="modal fade" id="new_proj" role="dialog"> <!--RESGISTER MODAL-->
+<div class="modal fade" id="new_proj" role="dialog"> 
   <div class="modal-dialog">
     <div class="modal-content">
       <form class="form-horizontal" role="form" action="{$BASE_URL}actions/project/new_project.php" method="post">
@@ -104,7 +97,7 @@
         </div>
         
 
-        <div class="modal-body"> <!--USERNAME/EMAIL/PASSWORD/CONFIRM PASSWORD-->
+        <div class="modal-body"> 
           <div>
             *Required field
           </div>

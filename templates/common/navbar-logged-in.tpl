@@ -62,7 +62,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> User <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {$USERNAME} <b class="caret"></b></a>
             <ul  id= "cont-bar" class="dropdown-menu">
               <li >
                 <a  href="{$BASE_URL}pages/users/profile.php"><i class="icon-large icon-user"></i> Profile</a>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/s1.ico">
+    <title>uManage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="assets/css/sb-admin.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/Chart.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+    <div >
+        <!-- Page Content -->
+        <div>
+            <!--Topic Table-->
+            <div id="tbl" class="col-md-4"> 
+                <table class="table table-hover" data-url="data1.json" data-height="299" data-sort-name="name" data-sort-order="desc">
+                    <thead id="tbl-head">
+                        <tr>
+                          <th data-field="name" data-align="center" data-sortable="true">Topic Name</th>
+                          <th data-field="creator" data-sortable="true">Creator</th>
+                          <th data-field="date" data-sortable="true">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr id="topic-ln"> 
+                          <td id="topic" class="td_class_1">
+                            <img id="chat-icon"src="http://bit.ly/1EB5UJ7"alt="" border=1 height=30 width=30></img>
+                            <a href="#">First Topic</a>
+                          </td>
+                          <td id="topic" class="td_class_1"><a href="#">Creator</a></td>
+                          <td id="topic" class="td_class_1">dd/mm/yyyy</td>
+                        </tr>
+                        <tr id="topic-ln">
+                          <td id="topic" class="td_class_1">
+                            <img id="chat-icon"src="http://bit.ly/1EB5UJ7" alt="" border=1 height=30 width=30></img>
+                            <a href="#">Second Topic</a>
+                          </td>
+                          <td id="topic" class="td_class_1"><a href="#">Creator</a></td>
+                          <td id="topic" class="td_class_1">dd/mm/yyyy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Topic Table-->
+
+            <!--Topic Table-->
+            <div id="tbl" class="col-md-8"> 
+                <table class="table table-hover " data-url="data1.json" data-height="299" data-sort-name="name" data-sort-order="desc">
+                    <thead id="tbl-head">
+                        <tr>
+                          <th id="topic-name" data-field="name" data-align="center" data-sortable="true">
+                            <img id="chat-icon"src="http://bit.ly/1EB5UJ7" alt="" border=1 height=30 width=30>
+                            </img>First Topic</th>
+                          <th id="topic-date" data-field="date" data-sortable="true">dd/mm/yyyy</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                      <!--First Topic-->
+                      <tr>
+                        <td>
+                          <img id="chat-icon"src="http://placehold.it/100x100" alt="" border=1 height=100 width=100></img>
+                          <br>
+                          <h5 id="creator">by <a href="#">User1</a></h5>
+                        </td>
+                        <td >
+                          <div id="topic-text" class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisi justo, lacinia eu auctor sit amet, congue nec odio. Nunc eu vehicula sapien. Aenean ac magna lectus. Aliquam sed felis eu nibh hendrerit semper at et nulla. Aliquam vel euismod enim. Vivamus ut metus lacinia, sodales eros in, convallis nunc. Nam vitae nulla auctor, fringilla arcu ut, semper felis. Proin tincidunt libero arcu, eu pharetra libero sodales ut. Aliquam viverra est mauris, nec dapibus lectus tempus eget. Duis et elit tempus, luctus lorem eu, pretium nisi.
+
+                            Phasellus convallis lorem et ante faucibus ultricies. Nulla non eros lobortis, dapibus orci et, rhoncus turpis. Nam in finibus quam. Aenean fringilla neque turpis, venenatis facilisis massa aliquet nec. Nam ac purus augue. Integer ipsum ex, ornare ut auctor in, elementum sed leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
+                            <h5>
+                              <br>
+                              <button styles="float:right"class="btn btn-default" type="submit"> Leave uR comment here</button>
+                              <br><br>
+                            </h5>                            
+                          </div>
+                        </td>
+                      </tr>
+                      <!--/#First Topic-->
+
+                      <!--First Comment Topic-->
+                      <tr id="comment">
+                        <td></td>
+                        <td>
+                          <div style="float:right"id="comment-head" >
+                            <img id="chat-icon"src="http://placehold.it/100x100" alt="" border=1 height=70 width=70></img>
+                            <br>
+                            <h5 style="margin-left: 15px">by <a href="#">User2</a></h5>
+                          </div>
+
+                          <div id="comment-text">
+                            Phasellus convallis lorem et ante faucibus ultricies.Phasellus convallis lorem et ante faucibus ultricies.Phasellus convallis lorem et ante faucibus ultricies.Phasellus convallis lorem et ante faucibus ultricies.Phasellus convallis lorem et ante faucibus ultricies.
+                            <h5>
+                              <br>
+                              <button style="margin-left:40px" class="btn btn-default" type="submit"> Leave uR comment here</button>
+                              <br>
+                            </h5>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--First Comment Topic-->
+
+                      <!--Second Topic-->
+                      <tr>
+                        <td>
+                          <img id="chat-icon"src="http://placehold.it/100x100" alt="" border=1 height=100 width=100></img>
+                          <br>
+                          <h5 id="creator">by <a href="#">User2</a></h5>
+                        </td>
+                        <td>
+                          <div id="topic-text" class="content">
+                            Phasellus convallis lorem et ante faucibus ultricies. Nulla non eros lobortis, dapibus orci et, rhoncus turpis. Nam in finibus quam. Aenean fringilla neque turpis, venenatis facilisis massa aliquet nec. Nam ac purus augue. Integer ipsum ex, ornare ut auctor in, elementum sed leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
+                            <h5>
+                              <br>
+                              <button styles="float:right"class="btn btn-default" type="submit"> Leave uR comment here</button>
+                              <br>
+                            </h5>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--/#Second Topic-->
+
+                    </tbody>
+                </table>
+            </div>
+            <!--Topic Table-->
+
+        </div>
+        <!-- /#Page Content -->
+
+        <!-- jQuery -->
+        <script src="assets/js/jquery.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
