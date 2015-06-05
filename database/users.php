@@ -28,14 +28,14 @@ function isLoginCorrect($username, $password) {
   return false;
 }
 
-function viewUsers(){
+/*function viewUsers(){
   global $conn;
     /*$stmt = $conn->prepare( "SELECT * FROM Utilizador" );
     $stmt->execute();
     return $stmt;*/
 
 
-    $sql = "SELECT * FROM user";
+   /* $sql = "SELECT * FROM user";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
     // output data of each row
@@ -46,6 +46,24 @@ function viewUsers(){
       echo "0 results";
     }
 
-  }
+  }*/
+
+function getUser(){
+  global $conn;
+  $username = $_SESSION['username'];
+  $stmt = $conn->prepare("SELECT * FROM users WHERE username= :username");
+  $stmt->bindParam(':username', $username);
+  $stmt->execute();
+  return $stmt->fetch();
+}
+
+function getUserProj(){
+  global $conn;
+  $username = $_SESSION['username'];
+  $stmt = $conn->prepare("SELECT name FROM project, users_project,(SELECT users_id FROM users WHERE username=:username) AS iduser WHERE project.coordenator_id=iduser.users_id OR users_project.users_id=iduser.users_id");
+  $stmt->bindParam(':username', $username);
+  $stmt->execute();
+  return $stmt->fetch();
+}
 
   ?>
