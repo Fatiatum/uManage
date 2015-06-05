@@ -43,7 +43,6 @@
     <div class="panel panel-info" >
       <div class="panel-heading">
         <div class="panel-title">Sign In</div>
-        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
       </div>
 
       <div style="padding-top:30px" class="panel-body" >
@@ -70,16 +69,6 @@
 
           <div style="margin-top:10px" class="form-group">
             <!-- Button -->
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-ggsignup" type="button" class="btn btn-danger"><i class="icon-google-plus"></i>   
-                Login with Google Account
-              </button>
-            </div>
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    
-                Login with Facebook
-              </button>
-            </div>
             <div class="col-md-offset-3 col-md-9">
               <button id="btn-login" type="submit" class="btn btn-warning">
                 Login
@@ -155,19 +144,10 @@
             <!-- Button -->
             <div class="col-md-offset-3 col-md-9">
               <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-              <span style="margin-left:8px;">or</span>
             </div>
           </div>
 
           <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
-
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    Sign Up with Facebook</button>
-            </div>
-            <br>
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-ggsignup" type="button" class="btn btn-danger"><i class="icon-google-plus"></i>   Sign Up with Google Account</button>
-            </div>
 
           </div>
         </form>
