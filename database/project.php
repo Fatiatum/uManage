@@ -66,7 +66,7 @@ function createProject($name, $descp, $visibility){
 }
 
   //get projects info
-function getProjInfo($name){
+function projInfo($name){
   global $conn;
 //(SELECT users_id FROM users_project WHERE project_id=1)AS members
 //("SELECT * FROM project, users_project WHERE project.project_id=1 AND users_project.project_id=1")
@@ -77,16 +77,19 @@ function getProjInfo($name){
   //get tasks from project
 function getTasks($name){
   global $conn;
-  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id");
+  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id=NULL");
   $stmt->bindParam(':name', $name);
   $stmt->execute();
+  return $stmt->fetchAll();
 }
   //get tasks from project whithin a task list
-function getTasksfromTList($name){
+function getTasksfromTList($name, $tasklist){
   global $conn;
-  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id!= NULL");
+  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id=:tasklist");
   $stmt->bindParam(':name', $name);
+  tmt->bindParam(':tasklist', $tasklist);
   $stmt->execute();
+  return $stmt->fetchAll();
 }
 
  //get task lists from project
@@ -95,6 +98,7 @@ function getTaskList($name){
   $stmt = $conn->prepare("SELECT * FROM task_list,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task_list.project_id=idproj.project_id");
   $stmt->bindParam(':name', $name);
   $stmt->execute();
+  return $stmt->fetchAll();
 }
 
   //get tasks assigned to member - modificar
