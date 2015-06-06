@@ -42,7 +42,7 @@ function createProject($name, $descp, $visibility){
   $rows = $coordId->fetch(PDO::FETCH_NUM);
   
   //insert into coordenator table
-  $coord = $conn->prepare("INSERT INTO coordenator (users_id) VALUES (:users_id) ");
+  $coord = $conn->prepare("INSERT INTO coordenator (users_id) SELECT :users_id WHERE :users_id NOT IN (SELECT users_id FROM coordenator)");
   $coord->bindParam(':users_id', $rows[0]);
   $coord->execute();
 
@@ -54,10 +54,19 @@ function createProject($name, $descp, $visibility){
   $stmt->bindParam(':coordenator_id', $rows[0]);
   $stmt->bindParam(':description', $descp);
   $stmt->execute();
+
+  //insert into users_project table
+  
+  $stmt = $conn->prepare("INSERT INTO users_project (project_id,users_id,insert_date) VALUES ((SELECT project_id FROM project WHERE name=:name),:users_id,:insert_date) ");
+  $stmt->bindParam(':users_id', $rows[0]);
+  $stmt->bindParam(':name', $name);
+  $stmt->bindParam(':insert_date', date("Y/m/d"));
+  $stmt->execute();
+  
 }
 
   //get projects info
-function getProjInfo($name){
+function projInfo($name){
   global $conn;
 //(SELECT users_id FROM users_project WHERE project_id=1)AS members
 //("SELECT * FROM project, users_project WHERE project.project_id=1 AND users_project.project_id=1")

@@ -26,7 +26,7 @@
       $photo = 'images/users/'.$project['username'].'.png';
     if (file_exists($BASE_DIR.'images/users/'.$project['name'].'.jpg'))
       $photo = 'images/users/'.$project['name'].'.jpg';
-    if (!$photo) $photo = 'images/assets/default_proj.png';
+    if (!$photo) $photo = 'images/assets/default_user.png';
     $projects[$key]['photo'] = $photo;
   }
 
