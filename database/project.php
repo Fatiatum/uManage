@@ -74,7 +74,7 @@ function projInfo($name){
   $stmt->bindParam(':name', $name);
   $stmt->execute();
 }
-  //get tasks from project
+  //get tasks from project without list
 function getTasks($name){
   global $conn;
   $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id=NULL");
@@ -85,7 +85,7 @@ function getTasks($name){
   //get tasks from project whithin a task list
 function getTasksfromTList($name, $tasklist){
   global $conn;
-  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id=:tasklist");
+  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id!=NULL ORDER BY task.task_list_id");
   $stmt->bindParam(':name', $name);
   tmt->bindParam(':tasklist', $tasklist);
   $stmt->execute();
