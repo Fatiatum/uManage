@@ -70,7 +70,7 @@ function projInfo($name){
   global $conn;
 //(SELECT users_id FROM users_project WHERE project_id=1)AS members
 //("SELECT * FROM project, users_project WHERE project.project_id=1 AND users_project.project_id=1")
-  $stmt = $conn->prepare("SELECT * FROM project, users_project,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE project.project_id=idproj.project_id AND users_project.project_id=idproj.project_id");
+  $stmt = $conn->prepare("SELECT * FROM project,(SELECT project_id FROM users_project,(SELECT users_id FROM users WHERE username=:username) AS iduser WHERE iduser.users_id=users_project.users_id) AS projid WHERE name=:name AND projid.project_id=project.project_id");
   $stmt->bindParam(':name', $name);
   $stmt->execute();
 }
