@@ -13,9 +13,9 @@
       <div class="col-lg-6">
         <h3><b>Talk about us:</b></h3>
         <p>
-          <a href="#"><i class="icon-facebook"></i></a>
-          <a href="#"><i class="icon-twitter"></i></a>
-          <a href="#"><i class="icon-google-plus"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
+          <a href="https://plus.google.com/" target="_blank"><i class="icon-google-plus"></i></a>
         </p>
         <br>
       </div>

@@ -1,4 +1,30 @@
-{include file='common/header-index.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:14:26
+         compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:197704557155730042796a69-63459903%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '74a76b1c8b4c83c39a931ceda169fcc95cf38968' => 
+    array (
+      0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/index.tpl',
+      1 => 1433600024,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '197704557155730042796a69-63459903',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_557300428821d5_02987076',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_557300428821d5_02987076')) {function content_557300428821d5_02987076($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header-index.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <!-- ========== HEADER SECTION ========== -->
 <section id="home" name="home"></section>
@@ -36,17 +62,20 @@
       <br>
       <br>
       <div class="col-lg-4">
-        <img src="{$BASE_URL}images/assets/ideia.png">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/ideia.png">
         <h4>ORGANIZE uR IDEIAS</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
       <div class="col-lg-4">
-        <img src="{$BASE_URL}images/assets/work.png">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/work.png">
         <h4>DIVIDE uR WORK</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
       <div class="col-lg-4">
-        <img src="{$BASE_URL}images/assets/deadline.png">
+        <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/deadline.png">
         <h4>MANAGE uR TIME</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
@@ -171,7 +200,8 @@
     
     <div class="developers-div">
     <div class="col-lg-4 team">
-      <img class="img-circle" src="{$BASE_URL}images/assets/team01.jpg" height="90" width="90">
+      <img class="img-circle" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/team01.jpg" height="90" width="90">
       <h4>Ana Rita Ferreira</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
@@ -183,7 +213,8 @@
     </div>
 
     <div class="col-lg-4 team">
-      <img class="img-circle" src="{$BASE_URL}images/assets/team02.jpg" height="90" width="90">
+      <img class="img-circle" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/team02.jpg" height="90" width="90">
       <h4>Jorge Filipe Teixeira</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
@@ -195,7 +226,8 @@
     </div>
 
     <div class="col-lg-4 team">
-      <img class="img-circle" src="{$BASE_URL}images/assets/team03.jpg" height="90" width="90">
+      <img class="img-circle" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/team03.jpg" height="90" width="90">
       <h4>Maria Miranda</h4>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>
@@ -209,4 +241,6 @@
 </div><!-- /container -->
 </div><!-- /g -->
 
-{include file='common/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php }} ?>

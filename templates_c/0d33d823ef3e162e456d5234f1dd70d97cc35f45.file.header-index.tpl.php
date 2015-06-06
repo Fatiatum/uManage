@@ -1,25 +1,59 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:14:26
+         compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/header-index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1378866958557300428b5239-77362092%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0d33d823ef3e162e456d5234f1dd70d97cc35f45' => 
+    array (
+      0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/header-index.tpl',
+      1 => 1433600024,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1378866958557300428b5239-77362092',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_557300429017c6_34191720',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_557300429017c6_34191720')) {function content_557300429017c6_34191720($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="{$BASE_URL}images/s1.ico">
+  <link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/s1.ico">
 
   <title>uManage</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="{$BASE_URL}/css/bootstrap.css" rel="stylesheet">
-  <link href="{$BASE_URL}/css/profile.css" rel="stylesheet">
+  <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/css/bootstrap.css" rel="stylesheet">
+  <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/css/profile.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="{$BASE_URL}/css/sb-admin.css" rel="stylesheet">
-  <link href="{$BASE_URL}/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="{$BASE_URL}/css/font-awesome.min.css">
-  <script src="{$BASE_URL}/javascript/jquery.min.js"></script>
-  <script src="{$BASE_URL}/javascript/Chart.js"></script>
-  <script src="{$BASE_URL}/javascript/modernizr.custom.js"></script>
+  <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/css/font-awesome.min.css">
+  <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/javascript/jquery.min.js"></script>
+  <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/javascript/Chart.js"></script>
+  <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+/javascript/modernizr.custom.js"></script>
 
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
@@ -52,10 +86,12 @@
           <li><a class="page-scroll" href="#portfolio">Projects</a></li>
           <li><a class="page-scroll" href="#about">About</a></li>
           <li><a class="page-scroll" href="#cont">Contact</a></li>
-          <li><a href="{$BASE_URL}pages/users/register.php">Log In</a></li>
+          <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/users/register.php">Log In</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
   </nav>
+<?php }} ?>

@@ -1,11 +1,11 @@
 <?php
-  session_set_cookie_params(3600, '/~ei12030');
+  session_set_cookie_params(3600, '/~ei12046');
   session_start();
 
   error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
 
-  $BASE_DIR = '/usr/users2/mieic2012/ei12030/public_html/uManage/';
-  $BASE_URL = '/~ei12030/uManage/';
+  $BASE_DIR = '/usr/users2/mieic2012/ei12046/public_html/uManage/';
+  $BASE_URL = '/~ei12046/uManage/';
 
   $conn = new PDO('pgsql:host=vdbm;dbname=lbaw1425', 'lbaw1425', 'fQ716tx3');
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
