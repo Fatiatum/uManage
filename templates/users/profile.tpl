@@ -62,6 +62,8 @@
   </div>
 </div>
 
+</div>
+
 <section>
   <h2>My Projects</h2>
   <div id="header_title" class="row">
@@ -79,7 +81,7 @@
 
   <article>
     <img src="{$BASE_URL}{$project.photo}">
-    <a href="{$BASE_URL}pages/projects/project.php?name={$project.name}">@{$project.name}</a>
+    <a href="{$BASE_URL}pages/projects/project.php?name={$project.name}">{$project.name}</a>
     <div>{$project.description}</div>
   </article>
 

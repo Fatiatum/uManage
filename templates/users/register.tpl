@@ -23,22 +23,6 @@
   <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
  
     <!-- ERROR PANEL -->
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="page-header">
-          <div id="error_messages">
-            {foreach $ERROR_MESSAGES as $error}
-            <div class="error" id= "error-msg">{$error}<a class="close" href="#">X</a></div>
-            {/foreach}
-          </div>
-          <div id="success_messages">
-            {foreach $SUCCESS_MESSAGES as $success}
-            <div class="success" id= "success-msg">{$success}<a class="close" href="#">X</a></div>
-            {/foreach}
-          </div>
-        </h1>
-      </div>
-    </div>
 
     <div class="panel panel-info" >
       <div class="panel-heading">
@@ -55,7 +39,7 @@
           </div>
 
           <div style="margin-bottom: 25px" class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
             <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
           </div>
 
@@ -73,7 +57,6 @@
               <button id="btn-login" type="submit" class="btn btn-warning">
                 Login
               </button>
-              <span style="margin-left:8px;">or</span>
             </div>
           </div>
 
@@ -94,7 +77,7 @@
 
 
   <!-- ======= REGISTER BOX ====== -->
-  <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+  <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
     <div class="panel panel-info">
       <div class="panel-heading">
         <div class="panel-title">Sign Up</div>
