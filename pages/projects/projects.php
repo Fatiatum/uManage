@@ -8,29 +8,26 @@
     exit;
   }
 
-  $username = $_SESSION['username'];
-  $projects = getUserProj();
+  $project_name=$_GET["name"];
+  $project = getProjInfo($project_name);
+  $tasksInLists = getTaskList($project_name);
+  $tasks = getTasks($project_name);
 
-  unset($user_photo);
-  if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.png'))
-      $user_photo = 'images/users/'.$user['username'].'.png';
-  if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.jpg'))
-      $user_photo = 'images/users/'.$user['username'].'.jpg';
-  if (!$user_photo) $user_photo = 'images/assets/default_user.png';
-  $user['photo'] = $user_photo;
-
-  foreach ($projects as $key => $project) {
-    unset($photo);
-    if (file_exists($BASE_DIR.'images/users/'.$project['name'].'.png'))
-      $photo = 'images/users/'.$project['username'].'.png';
-    if (file_exists($BASE_DIR.'images/users/'.$project['name'].'.jpg'))
-      $photo = 'images/users/'.$project['name'].'.jpg';
-    if (!$photo) $photo = 'images/assets/default_user.png';
-    $projects[$key]['photo'] = $photo;
+  $oldList = tasksInLists[0].task_list_id;
+  $index=0;
+  $i =0;
+  foreach($tasksInLists as $tl){
+    if($oldList != $tl.task_list_id){
+      $index++;
+      $i=0;
+      $oldList = $tl.task_list_id
+    }
+    $taskLists[$index][$i] = $tl;
+    $i++;
   }
-
-  $smarty->assign('user',$user);
-  $smarty->assign('last_project_id', $projects[0]['id']);
-  $smarty->assign('projects', $projects);
-  $smarty->display('users/profile.tpl');
+  $smarty->assign('tasks', $tasks);
+  $smarty->assign('project',$project);
+  $smarty->assign('taskLists',$taskLists);
+  $smarty->display('project/project.tpl');
+  
 ?>

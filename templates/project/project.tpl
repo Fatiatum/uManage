@@ -46,7 +46,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">
-        My Project
+        {$project.name}
       </h1>
     </div>
   </div>
@@ -92,20 +92,20 @@
         </div>
       </div>
       <!-- /.col-sm-4 -->
+
+      {foreach $taskLists as $tl}
       <div class="col-sm-4">
         <div class="panel panel-red">
           <div class="panel-heading">
-            <h3 class="panel-title">To Do
+            <h3 class="panel-title"> $tl.
               <button type="button" id="plus-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 <span class="caret"></span>
               </button>
             </h3>
           </div>
-          <div class="panel-body">
-            Panel content
-          </div>
         </div>
       </div>
+      {/foreach}
 
     </div>
     <!-- /.container-fluid -->
