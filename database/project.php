@@ -66,7 +66,7 @@ function createProject($name, $descp, $visibility){
 }
 
   //get projects info
-function projInfo($name){
+function getProjInfo($name){
   global $conn;
 //(SELECT users_id FROM users_project WHERE project_id=1)AS members
 //("SELECT * FROM project, users_project WHERE project.project_id=1 AND users_project.project_id=1")

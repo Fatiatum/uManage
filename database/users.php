@@ -60,7 +60,7 @@ function getUser(){
 function getUserProj(){
   global $conn;
   $username = $_SESSION['username'];
-  $stmt = $conn->prepare("SELECT name, description FROM project, users_project,(SELECT users_id FROM users WHERE username=:username) AS iduser WHERE project.coordenator_id=iduser.users_id OR users_project.users_id=iduser.users_id");
+  $stmt = $conn->prepare("SELECT name, description FROM project, users_project WHERE users_project.users_id=(SELECT users_id FROM users WHERE username=:username) AND users_project.project_id = project.project_id");
   $stmt->bindParam(':username', $username);
   $stmt->execute();
   return $stmt->fetchAll();
