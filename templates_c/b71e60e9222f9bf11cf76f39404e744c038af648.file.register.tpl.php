@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-18 12:49:34
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 14:48:31
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:115962559554d3ed3bc78c2-53009619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b71e60e9222f9bf11cf76f39404e744c038af648' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/users/register.tpl',
-      1 => 1431944652,
+      1 => 1433594905,
       2 => 'file',
     ),
   ),
@@ -83,7 +83,6 @@ $_smarty_tpl->tpl_vars['success']->_loop = true;
     <div class="panel panel-info" >
       <div class="panel-heading">
         <div class="panel-title">Sign In</div>
-        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
       </div>
 
       <div style="padding-top:30px" class="panel-body" >
@@ -111,16 +110,6 @@ actions/users/login.php" method="post">
 
           <div style="margin-top:10px" class="form-group">
             <!-- Button -->
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-ggsignup" type="button" class="btn btn-danger"><i class="icon-google-plus"></i>   
-                Login with Google Account
-              </button>
-            </div>
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    
-                Login with Facebook
-              </button>
-            </div>
             <div class="col-md-offset-3 col-md-9">
               <button id="btn-login" type="submit" class="btn btn-warning">
                 Login
@@ -190,26 +179,18 @@ actions/users/register.php" method="post">
           </div>
 
           <div class="form-group">
-            <label type="file" name="photo" class="col-md-3 control-label">Photo</label>
+            <label class="col-md-3 control-label">Photo</label>
+            <input type="file" name="photo">
           </div>
 
           <div class="form-group">
             <!-- Button -->
             <div class="col-md-offset-3 col-md-9">
               <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-              <span style="margin-left:8px;">or</span>
             </div>
           </div>
 
           <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
-
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>    Sign Up with Facebook</button>
-            </div>
-            <br>
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-ggsignup" type="button" class="btn btn-danger"><i class="icon-google-plus"></i>   Sign Up with Google Account</button>
-            </div>
 
           </div>
         </form>

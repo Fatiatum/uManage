@@ -137,7 +137,8 @@
           </div>
 
           <div class="form-group">
-            <label type="file" name="photo" class="col-md-3 control-label">Photo</label>
+            <label class="col-md-3 control-label">Photo</label>
+            <input type="file" name="photo">
           </div>
 
           <div class="form-group">

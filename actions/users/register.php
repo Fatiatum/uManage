@@ -24,7 +24,7 @@
   
   try {
     createUser($name, $email, $username, $pass);
-    move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $username . '.' . $extension); // this is dangerous
+    move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $USERNAME . '.' . $extension); // this is dangerous
     chmod($BASE_DIR . "images/users/" . $username . '.' . $extension, 0644);
   } catch (PDOException $e) {
 

@@ -1,6 +1,6 @@
 <?php
   include_once('../../config/init.php');
-  include_once($BASE_DIR .'database/project.php');
+  include_once($BASE_DIR .'database/users.php');
 
   if (!$_SESSION['username']) {
     $_SESSION['error_messages'][] = 'Undefined username';
@@ -10,7 +10,7 @@
 
   $username = $_SESSION['username'];
   $user = getUser();
-  $projects = getUserProjects();
+  $projects = getUserProj();
 
   unset($user_photo);
   if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.png'))

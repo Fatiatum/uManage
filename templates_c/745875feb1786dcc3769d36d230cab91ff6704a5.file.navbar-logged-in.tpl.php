@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-18 12:49:41
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-01 15:23:28
          compiled from "/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/navbar-logged-in.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1581394078554d490fc2d5b4-18306105%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '745875feb1786dcc3769d36d230cab91ff6704a5' => 
     array (
       0 => '/usr/users2/mieic2012/ei12030/public_html/uManage/templates/common/navbar-logged-in.tpl',
-      1 => 1431944652,
+      1 => 1433165005,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_554d490fcb0206_77645033',
   'variables' => 
   array (
+    'USERNAME' => 0,
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
@@ -87,7 +88,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> User <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_smarty_tpl->tpl_vars['USERNAME']->value;?>
+ <b class="caret"></b></a>
             <ul  id= "cont-bar" class="dropdown-menu">
               <li >
                 <a  href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
