@@ -1,5 +1,5 @@
 <?php
-
+/////////////////////////////////////CREATES/////////////////////////////////////////////////////
 function createProject($name, $descp, $visibility){
   global $conn;
   
@@ -35,6 +35,7 @@ function createProject($name, $descp, $visibility){
   
 }
 
+<<<<<<< HEAD
 function getProjects(){
 global $conn;
   $username = $_SESSION['username'];
@@ -44,6 +45,24 @@ global $conn;
   return $stmt->fetchAll();
 }
 
+=======
+function createTask($name, $task_list_id,$conclusion_date,$text){
+  global $conn;
+  
+  //insert into task table 
+  $tsk = $conn->prepare("INSERT INTO task (project_id,task_list_id,begin_date,conclusion_date,concluded,text) VALUES ((SELECT project_id FROM project WHERE name=:name),:task_list_id,:begin_date,:conclusion_date,false,:text)");
+  $tsk->bindParam(':name', $name);
+  $tsk->bindParam(':task_list_id', $task_list_id);
+  $tsk->bindParam(':begin_date',date("Y/m/d"));
+  $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
+  $tsk->bindParam(':text', $text);
+  $tsk->execute();
+  
+}
+////////////////////////////////////////////////EDITS//////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////REMOVES/////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////GETS///////////////////////////////////////////////////////////////////////////
+>>>>>>> a81e5e902b8bb52e054c5ff9b1cc48eb86031917
   //get projects info
 function getProjInfo($name){
   global $conn;
@@ -54,25 +73,28 @@ function getProjInfo($name){
   //get tasks from project without list
 function getTasks($name){
   global $conn;
-  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id=NULL");
+  $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id IS NULL");
   $stmt->bindParam(':name', $name);
   $stmt->execute();
   return $stmt->fetchAll();
 }
+  
   //get tasks from project whithin a task list
-function getTasksfromTList($name, $tasklist){
+function getTasksfromTList($name){
   global $conn;
   $stmt = $conn->prepare("SELECT * FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id AND task.task_list_id IS NOT NULL ORDER BY task.task_list_id");
   $stmt->bindParam(':name', $name);
-  $stmt->bindParam(':tasklist', $tasklist);
-  $stmt->execute();
   return $stmt->fetchAll();
 }
 
  //get task lists from project
 function getTaskList($name){
   global $conn;
+<<<<<<< HEAD
   $stmt = $conn->prepare("SELECT * FROM task_list,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task_list.project_id=idproj.project_id ORDER BY task.task_list_id");
+=======
+  $stmt = $conn->prepare("SELECT * FROM task_list,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task_list.project_id=idproj.project_id ORDER BY task_list_id");
+>>>>>>> a81e5e902b8bb52e054c5ff9b1cc48eb86031917
   $stmt->bindParam(':name', $name);
   $stmt->execute();
   return $stmt->fetchAll();
