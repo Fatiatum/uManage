@@ -1,0 +1,8 @@
+//transacao mudar coordenador
+BEGIN;
+(SELECT users_id FROM users_project WHERE project_id=(SELECT project_id FROM project WHERE name='cenas') limit 1) as new_coord_id;
+UPDATE project SET coordenator_id = new_coord_id
+    WHERE coordenator_id = '19';
+UPDATE coordenator SET coordenator_id = new_coord_id
+    WHERE coordenator_id = '19';
+COMMIT;
