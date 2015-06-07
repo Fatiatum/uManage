@@ -35,17 +35,8 @@ function createProject($name, $descp, $visibility){
   
 }
 
-<<<<<<< HEAD
-function getProjects(){
-global $conn;
-  $username = $_SESSION['username'];
-  $stmt = $conn->prepare("SELECT name, description FROM project, users_project WHERE (users_project.users_id=(SELECT users_id FROM users WHERE username=:username) AND users_project.project_id = project.project_id) OR project.public = 'true'");
-  $stmt->bindParam(':username', $username);
-  $stmt->execute();
-  return $stmt->fetchAll();
-}
 
-=======
+
 function createTask($name, $task_list_id,$conclusion_date,$text){
   global $conn;
   
@@ -62,7 +53,7 @@ function createTask($name, $task_list_id,$conclusion_date,$text){
 ////////////////////////////////////////////////EDITS//////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////REMOVES/////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////GETS///////////////////////////////////////////////////////////////////////////
->>>>>>> a81e5e902b8bb52e054c5ff9b1cc48eb86031917
+
   //get projects info
 function getProjInfo($name){
   global $conn;
@@ -90,16 +81,28 @@ function getTasksfromTList($name){
  //get task lists from project
 function getTaskList($name){
   global $conn;
-<<<<<<< HEAD
   $stmt = $conn->prepare("SELECT * FROM task_list,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task_list.project_id=idproj.project_id ORDER BY task.task_list_id");
-=======
-  $stmt = $conn->prepare("SELECT * FROM task_list,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task_list.project_id=idproj.project_id ORDER BY task_list_id");
->>>>>>> a81e5e902b8bb52e054c5ff9b1cc48eb86031917
   $stmt->bindParam(':name', $name);
   $stmt->execute();
   return $stmt->fetchAll();
 }
 
+function getProjects(){
+global $conn;
+  $username = $_SESSION['username'];
+  $stmt = $conn->prepare("SELECT name, description FROM project, users_project WHERE (users_project.users_id=(SELECT users_id FROM users WHERE username=:username) AND users_project.project_id = project.project_id) OR project.public = 'true'");
+  $stmt->bindParam(':username', $username);
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
+function getProjs($string){
+  global $conn;
+  $searchq = $string;
+  $searchq = preg_replace("#[0-9a-z]#i", "", $searchq);
+  $query = $conn->prepare("SELECT * FROM project WHERE name LIKE '%$searchq'");
+  $query->execute();
+  return $query->fetchAll();
+}
   //get tasks assigned to member - modificar
  /* function getAssignedTask($name){
   global $conn;
