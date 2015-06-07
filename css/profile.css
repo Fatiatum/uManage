@@ -104,3 +104,13 @@ table{
 span#edit{
 margin-left: 95%;
 }
+
+#my_projects{
+    margin-left: 15%;
+    padding-bottom: 10%;
+}
+
+#plus{
+    margin-left: 2%;
+    margin-top: 10%;
+}

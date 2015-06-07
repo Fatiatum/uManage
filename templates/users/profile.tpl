@@ -64,28 +64,26 @@
 
 </div>
 
-<section>
-  <h2>My Projects</h2>
-  <div id="header_title" class="row">
-    <div class="col-lg-12">
-      <div>
-        <a href="#new_proj" data-toggle="modal">
-          <span style= "float:right" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+<section id="my_projects">
+  <h2> My Projects
+    <a id="plus" title="New Project" href="#new_proj" data-toggle="modal" >
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </a>
-      </div>
-      
-    </div>
-  </div>
-
+  </h2>
+  
+ <div class="row">
   {foreach $projects as $project}
+<div class="col-md-4 portfolio-item">
+                <h2>
+                  <img src="{$BASE_URL}{$project.photo}" class="img-circle">
+                <a href="{$BASE_URL}pages/projects/projects.php?name={$project.name}">{$project.name}</a>
 
-  <article>
-    <img src="{$BASE_URL}{$project.photo}">
-    <a href="{$BASE_URL}pages/projects/project.php?name={$project.name}">{$project.name}</a>
-    <div>{$project.description}</div>
-  </article>
-
+                </h2>
+                
+                </a>
+            </div>
   {/foreach}
+  </div>
 
 </section>
 
@@ -103,6 +101,14 @@
           <div>
             *Required field
           </div>
+
+          <div class="form-group">
+            <label for="proj-photo" class="col-lg-2 control-label">Photo:</label>
+            <div class="col-lg-10">
+              <input id="photo" name="photo" type="file" class="col-md-10">
+            </div>
+          </div>
+
           <div class="form-group">
             <label for="proj-name" class="col-lg-2 control-label">*Name:</label>
             <div class="col-lg-8">
@@ -117,12 +123,7 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="proj-photo" class="col-lg-2 control-label">Photo:</label>
-            <div class="col-lg-10">
-              <input id="photo" name="photo" type="file" class="col-md-10">
-            </div>
-          </div>
+          
 
           <div class="form-group">
             <label for="proj-visibility" class="col-lg-2 control-label">*Public:</label>
