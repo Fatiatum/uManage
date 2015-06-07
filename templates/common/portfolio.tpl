@@ -26,9 +26,9 @@
   </div>
   <!-- /.row -->
   <div id="search-bar" class="container">
-    <form class="navbar-form navbar-left" role="search">
+    <form action="{$BASE_URL}pages/common/portfolio.php" class="navbar-form navbar-left" role="search">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
+        <input type="text" name="search" class="form-control" placeholder="Search" onkeydown="searchq();">
       </div>
       <button type="submit" id="ser-btn" class="btn btn-default"><i class="icon-large icon-search"></i></button>
     </form>
@@ -42,9 +42,9 @@
         <img class="img-responsive" src="{$BASE_URL}{$project.photo}" alt="">
       </a>
       <h3>
-        <a class="name" href="{$BASE_URL}pages/projects/list_projects.php?name={$project.name}" class="name">@{$project.name}</a>
+        <a class="name" href="{$BASE_URL}pages/projects/list_projects.php?name={$project.name}" class="name">{$project.name}</a>
       </h3>
-      <div class="project-description">{$project.text}</div>
+      <div class="project-description">{$project.description}</div>
     </div>
     {/foreach}
   </div>
@@ -85,5 +85,7 @@
   <hr>
 </div>
 <!-- /.container -->
+
+<script src="{$BASE_URL}javascript/portfolio.js"></script>
 
 {include file='common/footer.tpl'}
