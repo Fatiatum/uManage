@@ -11,19 +11,6 @@ function createUser($name, $email, $username, $password) {
   $stmt->execute();
 }
 
-function isAdminLogin($username, $password) {
-  global $conn;
-  $stmt = $conn->prepare("SELECT username, password FROM administrator WHERE username = :username AND password = :password");
-  $stmt->bindParam(':username', $username);
-  $stmt->bindParam(':password', $password);
-  $stmt->execute();
-  $rows = $stmt->fetch(PDO::FETCH_NUM);
-  if($rows>1){
-    return true;
-  }
-  return false;
-}
-
 function isLoginCorrect($username, $password) {
 
   global $conn;

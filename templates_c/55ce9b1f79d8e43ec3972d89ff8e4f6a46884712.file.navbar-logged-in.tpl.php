@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:14:42
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 16:31:03
          compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/navbar-logged-in.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2075810223557300527a5570-72758779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '55ce9b1f79d8e43ec3972d89ff8e4f6a46884712' => 
     array (
       0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/navbar-logged-in.tpl',
-      1 => 1433600024,
+      1 => 1433687436,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_557300527c6644_16971781',
   'variables' => 
   array (
     'USERNAME' => 0,
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_557300527c6644_16971781',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_557300527c6644_16971781')) {function content_557300527c6644_16971781($_smarty_tpl) {?><div class="container">
   <div class="navbar-header page-scroll">

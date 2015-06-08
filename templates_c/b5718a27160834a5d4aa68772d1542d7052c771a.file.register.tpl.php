@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:14:35
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 16:31:03
          compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/users/register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6004404885573004b3ea909-71039292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5718a27160834a5d4aa68772d1542d7052c771a' => 
     array (
       0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/users/register.tpl',
-      1 => 1433600025,
+      1 => 1433687437,
       2 => 'file',
     ),
   ),
@@ -15,17 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_5573004b4f3db3_43572384',
   'variables' => 
   array (
-    'ERROR_MESSAGES' => 0,
-    'error' => 0,
-    'SUCCESS_MESSAGES' => 0,
-    'success' => 0,
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_5573004b4f3db3_43572384',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5573004b4f3db3_43572384')) {function content_5573004b4f3db3_43572384($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -53,32 +49,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
  
     <!-- ERROR PANEL -->
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="page-header">
-          <div id="error_messages">
-            <?php  $_smarty_tpl->tpl_vars['error'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['error']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['ERROR_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['error']->key => $_smarty_tpl->tpl_vars['error']->value) {
-$_smarty_tpl->tpl_vars['error']->_loop = true;
-?>
-            <div class="error" id= "error-msg"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
-<a class="close" href="#">X</a></div>
-            <?php } ?>
-          </div>
-          <div id="success_messages">
-            <?php  $_smarty_tpl->tpl_vars['success'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['success']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['SUCCESS_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['success']->key => $_smarty_tpl->tpl_vars['success']->value) {
-$_smarty_tpl->tpl_vars['success']->_loop = true;
-?>
-            <div class="success" id= "success-msg"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
-<a class="close" href="#">X</a></div>
-            <?php } ?>
-          </div>
-        </h1>
-      </div>
-    </div>
 
     <div class="panel panel-info" >
       <div class="panel-heading">
@@ -96,7 +66,7 @@ actions/users/login.php" method="post">
           </div>
 
           <div style="margin-bottom: 25px" class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
             <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
           </div>
 
@@ -114,7 +84,6 @@ actions/users/login.php" method="post">
               <button id="btn-login" type="submit" class="btn btn-warning">
                 Login
               </button>
-              <span style="margin-left:8px;">or</span>
             </div>
           </div>
 
@@ -135,7 +104,7 @@ actions/users/login.php" method="post">
 
 
   <!-- ======= REGISTER BOX ====== -->
-  <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+  <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
     <div class="panel panel-info">
       <div class="panel-heading">
         <div class="panel-title">Sign Up</div>

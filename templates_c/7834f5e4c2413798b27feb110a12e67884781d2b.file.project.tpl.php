@@ -1,4 +1,26 @@
-{include file='common/header.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 12:42:18
+         compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/project/project.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1889722664557485838bc181-58041138%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '7834f5e4c2413798b27feb110a12e67884781d2b' => 
+    array (
+      0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/project/project.tpl',
+      1 => 1433760132,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1889722664557485838bc181-58041138',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_557485839bfcc1_94840925',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_557485839bfcc1_94840925')) {function content_557485839bfcc1_94840925($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <div id="wrapper">
 <!-- ========== HEADER SECTION ========== -->
@@ -100,4 +122,6 @@
   <!-- jQuery -->
   <script src="assets/js/jquery.js"></script>
 
-{include file='common/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php }} ?>
