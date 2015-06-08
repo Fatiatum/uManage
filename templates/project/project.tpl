@@ -262,7 +262,7 @@
                 <li><a href="#new_blank_list" data-toggle="modal">Task</a></li>
             </ul>
           </div>
-          <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
+          <a id="remove" title="Remove Project" href="{$BASE_URL}actions/project/remove_task_list.php?name={$project['name']}&task_list_name={$result[$list[0]['task_list_id']]}" data-toggle="modal" style="color: #f2f2f2;">
           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
         </a>
           </h3>

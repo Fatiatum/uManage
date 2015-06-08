@@ -7,14 +7,14 @@ if(!isset($_SESSION['username'])){
  }
 
 
-if (!$_GET['taskListId']) {
+if (!$_GET['task_list_name']) {
     $_SESSION['error_messages'][] = 'Expected project name';
     $_SESSION['form_values'] = $_POST;
     header("Location: $BASE_URL" . 'pages/users/profile.php');
     exit;
 }
 
-removeTaskList($_GET['taskListId']);
+removeTaskList($_GET['task_list_name']);
 header("Location: $BASE_URL" . 'pages/projects/projects.php?name=' . $_GET['name']);
 
 
