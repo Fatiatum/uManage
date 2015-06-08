@@ -20,14 +20,14 @@
   if (!$user_photo) $user_photo = 'images/assets/default_user.png';
   $user['photo'] = $user_photo;
 
-  foreach ($projects as $key => $project) {
+  foreach ($projects as $proj) {
     unset($photo);
-    if (file_exists($BASE_DIR.'images/users/'.$project['name'].'.png'))
-      $photo = 'images/users/'.$project['username'].'.png';
-    if (file_exists($BASE_DIR.'images/users/'.$project['name'].'.jpg'))
-      $photo = 'images/users/'.$project['name'].'.jpg';
+    if (file_exists($BASE_DIR.'images/users/'.$proj['name'].'.png'))
+      $photo = 'images/users/'.$proj['name'].'.png';
+    if (file_exists($BASE_DIR.'images/users/'.$proj['name'].'.jpg'))
+      $photo = 'images/users/'.$proj['name'].'.jpg';
     if (!$photo) $photo = 'images/assets/default_user.png';
-    $projects[$key]['photo'] = $photo;
+    $proj['photo'] = $photo;
   }
 
   $smarty->assign('user',$user);

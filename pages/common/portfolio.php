@@ -1,14 +1,15 @@
 <?php
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/project.php');
+include_once($BASE_DIR .'database/admin.php');
 
-if ((!$_SESSION['username']) && ($_SESSION['admin']) {
+if (!(isset($_SESSION['username'])) && !(isset($_SESSION['admin']))) {
   $_SESSION['error_messages'][] = 'Undefined username';
   header("Location: $BASE_URL");
   exit;
 }
 
-if($_SESSION['username']){
+if(isset($_SESSION['username'])){
   if(!$_GET['search']){
     $projects = getProjects();
   }
@@ -18,12 +19,27 @@ if($_SESSION['username']){
 }
 else{
   if(!$_GET['search']){
-    $projects = getProjects();
+    $projects = getAllProjects();
+    $users = getAllUsers();
   }
   else{
-    $projects = getProjs($_GET['search']);
+    $projects = getAllProjs($_GET['search']);
+    $users = getUsers($_GET['search']);
+  }
+
+  foreach ($users as &$user) {
+    unset($photo);
+    if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.png'))
+      $photo = 'images/users/'.$user['username'].'.png';
+    if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.jpg'))
+      $photo = 'images/users/'.$user['username'].'.jpg';
+    if (!$photo) $photo = 'images/assets/default_user.png';
+    $user['photo'] = $photo;
+
+    $smarty->assign('users', $users);
   }
 }
+
 
 foreach ($projects as &$proj) {
   unset($photo);
