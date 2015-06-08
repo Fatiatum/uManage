@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 16:31:03
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 20:31:30
          compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7942661655573004b518721-69043464%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '36b2faf94d08cf0434cc753616fafe05656238c9' => 
     array (
       0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/header.tpl',
-      1 => 1433687436,
+      1 => 1433788249,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'BASE_URL' => 0,
-    'USERNAME' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -69,7 +68,7 @@ images/assets/s1.ico">
 
 <body id="proj-body" data-spy="scroll" data-offset="0" data-target="#theMenu">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+    <?php if ((isset($_SESSION['username'])||isset($_SESSION['admin']))) {?>
       <?php echo $_smarty_tpl->getSubTemplate ('common/navbar-logged-in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     <?php } else { ?>

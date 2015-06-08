@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 18:15:40
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 21:15:31
          compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/portfolio.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:846500966557300f3439890-67354199%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8d4236823a073cd10d4741504e8fdd6dee564e5c' => 
     array (
       0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/portfolio.tpl',
-      1 => 1433687437,
+      1 => 1433788250,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'projects' => 0,
     'BASE_URL' => 0,
     'project' => 0,
+    'users' => 0,
+    'user' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -42,16 +44,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <!-- Page Content -->
 <div id= "port" class="container">
-
-  <!-- Page Header -->
-  <div id= "header_title"class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Projects
-        <br>
-        <small style="padding-left: 15px">   All uR projects and public projects</small>
-      </h1>
-    </div>
-  </div>
   <!-- /.row -->
   <div id="search-bar" class="container">
     <form class="navbar-form navbar-left" role="search">
@@ -61,6 +53,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <button type="submit" id="ser-btn" class="btn btn-default"><i class="icon-large icon-search"></i></button>
     </form>
   </div>
+  <!-- Page Header -->
+  <div id= "header_title"class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Projects
+        <br>
+        <?php if (isset($_SESSION['username'])) {?>
+        <small style="padding-left: 15px">   All uR projects and public projects</small>
+        <?php }?>
+      </h1>
+    </div>
+  </div>
+  
+
 
   <!-- Projects Row -->
   <div class="row">
@@ -77,10 +82,15 @@ $_smarty_tpl->tpl_vars['project']->_loop = true;
       </a>
       <h3>
         <a class="name" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/projects/list_projects.php?name=<?php echo $_smarty_tpl->tpl_vars['project']->value['name'];?>
+pages/projects/projects.php?name=<?php echo $_smarty_tpl->tpl_vars['project']->value['name'];?>
 " class="name">@<?php echo $_smarty_tpl->tpl_vars['project']->value['name'];?>
 </a>
       </h3>
+        <a id="remove" title="Remove Project" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/common/removeProj.php?name=<?php echo $_smarty_tpl->tpl_vars['project']->value['name'];?>
+" data-toggle="modal" style="color: #f2f2f2;">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </a>
       <div class="project-description"><?php echo $_smarty_tpl->tpl_vars['project']->value['text'];?>
 </div>
     </div>
@@ -88,39 +98,47 @@ pages/projects/list_projects.php?name=<?php echo $_smarty_tpl->tpl_vars['project
   </div>
   <!-- /.row -->
 
-  <hr>
-
-  <!-- Pagination -->
-  <div class="row text-center">
+  <!-- Projects Row -->
+  <?php if (isset($_SESSION['admin'])) {?>
+  <div id= "header_title"class="row">
     <div class="col-lg-12">
-      <ul class="pagination">
-        <li>
-          <a href="#">&laquo;</a>
-        </li>
-        <li class="active">
-          <a href="#">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-        <li>
-          <a href="#">4</a>
-        </li>
-        <li>
-          <a href="#">5</a>
-        </li>
-        <li>
-          <a href="#">&raquo;</a>
-        </li>
-      </ul>
+      <h1 class="page-header">Users
+        <br>
+      </h1>
     </div>
   </div>
+
+  <div class="row">
+    <?php  $_smarty_tpl->tpl_vars['user'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['user']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['users']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['user']->key => $_smarty_tpl->tpl_vars['user']->value) {
+$_smarty_tpl->tpl_vars['user']->_loop = true;
+?>
+    <div class="col-md-4 portfolio-item">
+      <a href="#">
+        <img class="img-responsive" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+<?php echo $_smarty_tpl->tpl_vars['user']->value['photo'];?>
+" alt="">
+      </a>
+      <h3>
+        <a class="name" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/users/profile.php?username=<?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+" class="name">@<?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+</a>
+      </h3>
+      <a id="remove" title="Remove Project" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/common/removeUser.php?username=<?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+" data-toggle="modal" style="color: #f2f2f2;">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </a>
+    </div>
+    <?php } ?>
+  </div>
   <!-- /.row -->
+  <?php }?>
 
   <hr>
+
 </div>
 <!-- /.container -->
 

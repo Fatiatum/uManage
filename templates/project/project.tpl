@@ -123,6 +123,8 @@
 
   </div>
 </div>
+
+
 <!--Edit tasks modal -->
 <div class="modal fade" id="edit_task" role="dialog"> 
   <div class="modal-dialog">
@@ -184,7 +186,7 @@
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="margin-letf:0.5%">New 
               <span class="caret" ></span></button>
             <ul class="dropdown-menu" style="margin-left:-170%;">
-                <li><a href="#">Task</a></li>
+                <li><a href="#new_blank_list" data-toggle="modal">Task</a></li>
             </ul>
           </div>
           <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
@@ -205,7 +207,7 @@
             <div class="btn-group" style="margin-left: 13.5%; margin-top:-3%;">
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" >New <span class="caret"></span></button>
             <ul class="dropdown-menu" style="margin-left:-175%;">
-                <li><a href="#">Task</a></li>
+                <li><a href="#new_blank_list" data-toggle="modal">Task</a></li>
             </ul>
           </div>
            <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
@@ -224,10 +226,10 @@
         <div class="panel panel-red">
           <div class="panel-heading">
             <h3 class="panel-title"> ToDo
-              <div class="btn-group" style="margin-left: 50.5%; margin-top:-3%;">
+              <div class="btn-group" style="margin-left: 36.5%; margin-top:-3%;">
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" >New <span class="caret"></span></button>
             <ul class="dropdown-menu" style="margin-left:-175%">
-                <li><a href="#">Task</a></li>
+                <li><a href="#new_blank_list" data-toggle="modal">Task</a></li>
             </ul>
           </div>
           <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
@@ -257,17 +259,17 @@
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="margin-letf:0.5%">New 
               <span class="caret" ></span></button>
             <ul class="dropdown-menu" style="margin-left:-170%;">
-                <li><a href="#">Task</a></li>
+                <li><a href="#new_blank_list" data-toggle="modal">Task</a></li>
             </ul>
           </div>
-          <a id="remove" title="New Project" href="{$BASE_URL}actions/project/remove_task_list.php?taskListId={$result[$list[0]['task_list_id']]}&name={$project['name']}" data-toggle="modal" style="color: #f2f2f2;">
+          <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
         </a>
           </h3>
         </div>  
             {foreach $list as $task}         
             <div class="panel-body">
-               <a href="#edit_task" data-toggle="modal">{$task["text"]}</a>
+              <a href="#edit_task" data-toggle="modal">{$task["text"]}</a>
             </div>
             {/foreach}
       </div>

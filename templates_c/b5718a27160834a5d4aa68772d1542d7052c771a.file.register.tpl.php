@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 16:31:03
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 20:31:30
          compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/users/register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6004404885573004b3ea909-71039292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b5718a27160834a5d4aa68772d1542d7052c771a' => 
     array (
       0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/users/register.tpl',
-      1 => 1433687437,
+      1 => 1433788250,
       2 => 'file',
     ),
   ),
@@ -27,8 +27,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 <<?php ?>?php 
-    if(isset($_SESSION['username'])){
+  if(isset($_SESSION['username'])){
     header("Location: $BASE_URL" . 'pages/users/profile.php');
+  }
+  else if(isset($_SESSION['admin'])){
+    header("Location: $BASE_URL" . 'pages/common/portfolio.php');
   }
 ?<?php ?>>
 

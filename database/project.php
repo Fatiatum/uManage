@@ -1,5 +1,5 @@
 <?php
-///////////////////////////////////////////////////CREATES///////////////////////////////////////////////////////////
+
 function createProject($name, $descp, $visibility){
   global $conn;
   
@@ -35,30 +35,6 @@ function createProject($name, $descp, $visibility){
   
 }
 
-function createTaskList($name,$listname, $conclusion_date){
-  global $conn;
-  
-  //insert into task table 
-  $tsk = $conn->prepare("INSERT INTO task_list (project_id,name,begin_date,conclusion_date,concluded) VALUES ((SELECT project_id FROM project WHERE name=:name),:listname,:begin_date,:conclusion_date,false)");
-  $tsk->bindParam(':name', $name);
-  $tsk->bindParam(':listname', $listname);
-  $tsk->bindParam(':begin_date',date("Y/m/d"));
-  $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
-  $tsk->bindParam(':text', $text);
-  $tsk->execute();
-
-  function createTask($name, $task_list_id,$conclusion_date,$text){
-  global $conn;
-  
-  //insert into task table 
-  $tsk = $conn->prepare("INSERT INTO task (project_id,task_list_id,begin_date,conclusion_date,concluded,text) VALUES ((SELECT project_id FROM project WHERE name=:name),:task_list_id,:begin_date,:conclusion_date,false,:text)");
-  $tsk->bindParam(':name', $name);
-  $tsk->bindParam(':task_list_id', $task_list_id);
-  $tsk->bindParam(':begin_date',date("Y/m/d"));
-  $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
-  $tsk->bindParam(':text', $text);
-  $tsk->execute();
-////////////////////////////////////////////////////////GETS/////////////////////////////////////////////////////////////
   //get projects info
 function getProjInfo($name){
   global $conn;
@@ -96,7 +72,13 @@ function getTaskList($name){
   $stmt->execute();
   return $stmt->fetchAll();
 }
-  
+  //get tasks assigned to member - modificar
+function getAssignedTask($name){
+  global $conn;
+  $stmt = $conn->prepare("SELECT * FROM task_list,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task_list.project_id=idproj.project_id");
+  $stmt->bindParam(':name', $name);
+  $stmt->execute();
+}
 
 function getProjects(){
 global $conn;
@@ -112,28 +94,5 @@ function getProjs($string){
   $query->execute(array('%' . $string . '%'));
   return $query->fetchAll();
 }
-function getTaskListIds(){
-  global $conn;
-  $stmt = $conn->prepare("SELECT task_list_id FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id");
-  $stmt->bindParam(':task_id', $task_id);
-  $stmt->execute();
-  return $stmt->fetchAll();
-}
-/////////////////////////////////////////////////REMOVES///////////////////////////////////////////////////////////////
-function removeTaskList($name){
-  global $conn;
-  $stmt = $conn->prepare("DELETE FROM task_list WHERE name=:name");
-  $stmt->bindParam(':name', $name);
-  $stmt->execute();
-  return true;
-}
-function removeTask($task_id){
-  global $conn;
-  $stmt = $conn->prepare("DELETE FROM task WHERE task_id=:task_id");
-  $stmt->bindParam(':task_id', $task_id);
-  $stmt->execute();
-  return true;
-}
-
 
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 12:26:41
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 20:31:30
          compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/users/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17655933535573005261d3d6-42057696%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62c49b643f8d768c0fe632e6350c2ce1a3fd60b5' => 
     array (
       0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/users/profile.tpl',
-      1 => 1433758282,
+      1 => 1433788250,
       2 => 'file',
     ),
   ),
@@ -108,32 +108,32 @@ $_smarty_tpl->tpl_vars['error']->_loop = true;
 <section id="my_projects">
   <h2> My Projects
     <a id="plus" title="New Project" href="#new_proj" data-toggle="modal" >
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </a>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
   </h2>
   
- <div class="row">
-  <?php  $_smarty_tpl->tpl_vars['project'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['project']->_loop = false;
+  <div class="row">
+    <?php  $_smarty_tpl->tpl_vars['project'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['project']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['projects']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['project']->key => $_smarty_tpl->tpl_vars['project']->value) {
 $_smarty_tpl->tpl_vars['project']->_loop = true;
 ?>
-<div class="col-md-4 portfolio-item">
-                <h2>
-                  <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+    <div class="col-md-4 portfolio-item">
+      <h2>
+        <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 <?php echo $_smarty_tpl->tpl_vars['project']->value['photo'];?>
 " class="img-circle">
-                <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/projects/projects.php?name=<?php echo $_smarty_tpl->tpl_vars['project']->value['name'];?>
 "><?php echo $_smarty_tpl->tpl_vars['project']->value['name'];?>
 </a>
 
-                </h2>
-                
-                </a>
-            </div>
-  <?php } ?>
+      </h2>
+      
+    </a>
   </div>
+  <?php } ?>
+</div>
 
 </section>
 

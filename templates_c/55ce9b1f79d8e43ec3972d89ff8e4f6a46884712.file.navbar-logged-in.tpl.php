@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 16:31:03
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 20:31:30
          compiled from "/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/navbar-logged-in.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2075810223557300527a5570-72758779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '55ce9b1f79d8e43ec3972d89ff8e4f6a46884712' => 
     array (
       0 => '/usr/users2/mieic2012/ei12046/public_html/uManage/templates/common/navbar-logged-in.tpl',
-      1 => 1433687436,
+      1 => 1433788250,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_557300527c6644_16971781',
   'variables' => 
   array (
-    'USERNAME' => 0,
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
@@ -38,6 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div id ="nav_content" class="collapse navbar-collapse navbar-ex1-collapse">
     <ul  class="nav navbar-right top-nav">
+    <?php if ((isset($_SESSION['username']))) {?>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           <i class="icon-large  icon-envelope"></i>
@@ -87,14 +87,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               </li>
             </ul>
           </li>
+           <?php }?>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_smarty_tpl->tpl_vars['USERNAME']->value;?>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['admin'];?>
+ <?php echo $_SESSION['username'];?>
  <b class="caret"></b></a>
             <ul  id= "cont-bar" class="dropdown-menu">
+              <?php if ((isset($_SESSION['username']))) {?>
               <li >
                 <a  href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/users/profile.php"><i class="icon-large icon-user"></i> Profile</a>
               </li>
+              <?php }?>
               <li class="active">
                 <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/common/portfolio.php"><i class="icon-large icon-th"></i> Portfolio</a>
