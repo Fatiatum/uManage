@@ -2,18 +2,28 @@
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/project.php');
 
-if (!$_SESSION['username']) {
+if ((!$_SESSION['username']) && ($_SESSION['admin']) {
   $_SESSION['error_messages'][] = 'Undefined username';
   header("Location: $BASE_URL");
   exit;
 }
 
-// GET ALL PROJECTS
-// RESTRICT AFTER ONKEYDOWN
-// COPY CODE TO ACTIONS FOLDER
-
-$projects = getProjects();
-
+if($_SESSION['username']){
+  if(!$_GET['search']){
+    $projects = getProjects();
+  }
+  else{
+    $projects = getProjs($_GET['search']);
+  }
+}
+else{
+  if(!$_GET['search']){
+    $projects = getProjects();
+  }
+  else{
+    $projects = getProjs($_GET['search']);
+  }
+}
 
 foreach ($projects as &$proj) {
   unset($photo);

@@ -1,5 +1,6 @@
 <?php
 /////////////////////////////////////CREATES/////////////////////////////////////////////////////
+
 function createProject($name, $descp, $visibility){
   global $conn;
   
@@ -36,7 +37,7 @@ function createProject($name, $descp, $visibility){
 }
 
 
-
+/*
 function createTask($name, $task_list_id,$conclusion_date,$text){
   global $conn;
   
@@ -50,6 +51,7 @@ function createTask($name, $task_list_id,$conclusion_date,$text){
   $tsk->execute();
   
 }
+*/
 ////////////////////////////////////////////////EDITS//////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////REMOVES/////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////GETS///////////////////////////////////////////////////////////////////////////
@@ -97,12 +99,11 @@ global $conn;
 }
 function getProjs($string){
   global $conn;
-  $searchq = $string;
-  $searchq = preg_replace("#[0-9a-z]#i", "", $searchq);
-  $query = $conn->prepare("SELECT * FROM project WHERE name LIKE '%$searchq'");
-  $query->execute();
+  $query = $conn->prepare("SELECT * FROM project WHERE name LIKE ? AND (users_project.project_id = project.project_id OR project.public = 'true')");
+  $query->execute(array('%' . $string . '%'));
   return $query->fetchAll();
 }
+
   //get tasks assigned to member - modificar
  /* function getAssignedTask($name){
   global $conn;

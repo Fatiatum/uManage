@@ -27,7 +27,10 @@
 <div id="info" class="container">
   <div class="panel panel-info">
     <div class="panel-heading">
-      <h3 class="panel-title " style="margin-bottom: 3%">{$user.name}</h3>
+      <h3 class="panel-title ">{$user.name}</h3>
+      <a href="#">
+        <span style= "margin-left:95%" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+      </a>
     </div>
     <div class="panel-body">
       <div class="row">
@@ -94,33 +97,38 @@
         </div>
         
 
-        <div class="modal-body" style="padding-bottom: 5%"> 
-          <div style="margin-bottom: 3%; margin-left: 80%;">*Required field </div>
-          <div class="form-group" >
-            <label style="text-align: left; padding-left: 5%;" for="proj-photo" class="col-lg-2 control-label">Photo:</label>
+        <div class="modal-body"> 
+          <div>
+            *Required field
+          </div>
+
+          <div class="form-group">
+            <label for="proj-photo" class="col-lg-2 control-label">Photo:</label>
             <div class="col-lg-10">
-              <input id="photo" name="photo" type="file" class="col-md-10" style="margin-top:1%;">
+              <input id="photo" name="photo" type="file" class="col-md-10">
             </div>
           </div>
 
           <div class="form-group">
-            <label style="text-align: left; padding-left: 5%;" for="proj-name" class="col-lg-2 control-label">*Name:</label>
-            <div class="col-lg-8" style="padding-left: 5%;">
-              <input id="name" name="name" type="text" class="col-md-8" placeholder="name" style="margin-top:1%;">
+            <label for="proj-name" class="col-lg-2 control-label">*Name:</label>
+            <div class="col-lg-8">
+              <input id="name" name="name" type="text" class="col-md-6" placeholder="name">
             </div>
           </div>
 
           <div class="form-group">
-            <label style="text-align: left; padding-left: 5%;" for="proj-description" class="col-lg-2 control-label">Description:</label>
-            <div class="col-lg-10" style="padding-left: 5%;">
-              <input id="description" name="description" type="text" class="col-md-8" placeholder="description" style="margin-top:1%;">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label style="text-align: left; padding-left: 5%;" for="proj-visibility" class="col-lg-2 control-label">*Public:</label>
+            <label for="proj-description" class="col-lg-2 control-label">Description:</label>
             <div class="col-lg-10">
-              <input id="public" name="public" type="checkbox" style="margin-left:3%; margin-top:2%;">
+              <input id="description" name="description" type="text" class="col-md-6" placeholder="description">
+            </div>
+          </div>
+
+          
+
+          <div class="form-group">
+            <label for="proj-visibility" class="col-lg-2 control-label">*Public:</label>
+            <div class="col-lg-10">
+              <input id="public" name="public" type="checkbox" class="col-md-10">
             </div>
           </div>
 

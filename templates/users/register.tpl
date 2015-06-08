@@ -84,7 +84,7 @@
         <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
       </div>
       <div class="panel-body" >
-        <form id="signupform" class="form-horizontal" role="form" action="{$BASE_URL}actions/users/register.php" method="post">
+        <form id="signupform" class="form-horizontal" role="form" enctype="multipart/form-data" action="{$BASE_URL}actions/users/register.php" method="post">
 
           <div id="signupalert" style="display:none" class="alert alert-danger">
             <p>Error:</p>
@@ -127,7 +127,7 @@
           <div class="form-group">
             <!-- Button -->
             <div class="col-md-offset-3 col-md-9">
-              <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+              <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i>Sign Up</button>
             </div>
           </div>
 
