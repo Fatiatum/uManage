@@ -1,5 +1,5 @@
 <?php
-
+///////////////////////////////////////////////////CREATES///////////////////////////////////////////////////////////
 function createProject($name, $descp, $visibility){
   global $conn;
   
@@ -58,7 +58,7 @@ function createTaskList($name,$listname, $conclusion_date){
   $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
   $tsk->bindParam(':text', $text);
   $tsk->execute();
-
+////////////////////////////////////////////////////////GETS/////////////////////////////////////////////////////////////
   //get projects info
 function getProjInfo($name){
   global $conn;
@@ -96,13 +96,7 @@ function getTaskList($name){
   $stmt->execute();
   return $stmt->fetchAll();
 }
-  //get tasks assigned to member - modificar
-function getAssignedTask($name){
-  global $conn;
-  $stmt = $conn->prepare("SELECT * FROM task_list,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task_list.project_id=idproj.project_id");
-  $stmt->bindParam(':name', $name);
-  $stmt->execute();
-}
+  
 
 function getProjects(){
 global $conn;
@@ -118,7 +112,14 @@ function getProjs($string){
   $query->execute(array('%' . $string . '%'));
   return $query->fetchAll();
 }
-
+function getTaskListIds(){
+  global $conn;
+  $stmt = $conn->prepare("SELECT task_list_id FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id");
+  $stmt->bindParam(':task_id', $task_id);
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
+/////////////////////////////////////////////////REMOVES///////////////////////////////////////////////////////////////
 function removeTaskList($name){
   global $conn;
   $stmt = $conn->prepare("DELETE FROM task_list WHERE name=:name");
@@ -134,11 +135,5 @@ function removeTask($task_id){
   return true;
 }
 
-function getTaskListIds(){
-  global $conn;
-  $stmt = $conn->prepare("SELECT task_list_id FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id");
-  $stmt->bindParam(':task_id', $task_id);
-  $stmt->execute();
-  return $stmt->fetchAll();
-}
+
 ?>
