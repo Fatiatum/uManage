@@ -35,6 +35,30 @@ function createProject($name, $descp, $visibility){
   
 }
 
+function createTaskList($name,$listname, $conclusion_date){
+  global $conn;
+  
+  //insert into task table 
+  $tsk = $conn->prepare("INSERT INTO task_list (project_id,name,begin_date,conclusion_date,concluded) VALUES ((SELECT project_id FROM project WHERE name=:name),:listname,:begin_date,:conclusion_date,false)");
+  $tsk->bindParam(':name', $name);
+  $tsk->bindParam(':listname', $listname);
+  $tsk->bindParam(':begin_date',date("Y/m/d"));
+  $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
+  $tsk->bindParam(':text', $text);
+  $tsk->execute();
+
+  function createTask($name, $task_list_id,$conclusion_date,$text){
+  global $conn;
+  
+  //insert into task table 
+  $tsk = $conn->prepare("INSERT INTO task (project_id,task_list_id,begin_date,conclusion_date,concluded,text) VALUES ((SELECT project_id FROM project WHERE name=:name),:task_list_id,:begin_date,:conclusion_date,false,:text)");
+  $tsk->bindParam(':name', $name);
+  $tsk->bindParam(':task_list_id', $task_list_id);
+  $tsk->bindParam(':begin_date',date("Y/m/d"));
+  $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
+  $tsk->bindParam(':text', $text);
+  $tsk->execute();
+
   //get projects info
 function getProjInfo($name){
   global $conn;
