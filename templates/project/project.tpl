@@ -214,7 +214,7 @@
                 <li><a href="#">Task</a></li>
             </ul>
           </div>
-          <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
+          <a id="remove" title="New Project" href="{$BASE_URL}actions/project/remove_task_list.php?taskListId={$result[$list[0]['task_list_id']]}&name={$project['name']}" data-toggle="modal" style="color: #f2f2f2;">
           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
         </a>
           </h3>
