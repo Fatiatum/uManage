@@ -39,6 +39,6 @@ try {
 	exit;
 }
 $_SESSION['success_messages'][] = 'Project created successfully';
-header("Location: $BASE_URL" . 'pages/projects/project.php');
+header("Location: $BASE_URL" . 'pages/users/profile.php');
 
 ?>

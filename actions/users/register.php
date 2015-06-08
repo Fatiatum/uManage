@@ -5,6 +5,9 @@
   if(isset($_SESSION['username'])){
     header("Location: $BASE_URL" . 'pages/users/profile.php');
   }
+  else if(isset($_SESSION['admin'])){
+    header("Location: $BASE_URL" . 'pages/common/portfolio.php');
+  }
 
   if (!$_POST['email'] || !$_POST['name']  || !$_POST['username'] || !$_POST['password']) {
     $_SESSION['error_messages'][] = 'All fields are mandatory';

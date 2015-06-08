@@ -13,7 +13,13 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $pass = sha1($password);
 try{
-  if (isLoginCorrect($username, $pass)) {
+  if(isAdminLogin($username, $pass)){
+    $_SESSION['admin'] = $username;
+    $_SESSION['success_messages'][] = 'Login as admin successful';
+    header("Location: $BASE_URL" . 'pages/common/portfolio.php');
+    exit;
+  }
+  else if (isLoginCorrect($username, $pass)) {
     $_SESSION['username'] = $username;
     $_SESSION['success_messages'][] = 'Login successful';
     header("Location: $BASE_URL" . 'pages/users/profile.php');

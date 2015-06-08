@@ -33,7 +33,7 @@
 
 <body id="proj-body" data-spy="scroll" data-offset="0" data-target="#theMenu">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    {if $USERNAME}
+    {if (isset($smarty.session.username) || isset($smarty.session.admin))}
       {include file='common/navbar-logged-in.tpl'}
     {else}
       {include file='common/navbar-register.tpl'}

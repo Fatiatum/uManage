@@ -33,7 +33,7 @@ function removeProj($name){
   $stmt = $conn->prepare("DELETE FROM project WHERE name=:name");
   $stmt->bindParam(':name', $name);
   $stmt->execute();
-  return $stmt->fetchAll();
+  return true;
 }
 
 function removeUser($username){
@@ -44,4 +44,4 @@ function removeUser($username){
   return $stmt->fetchAll();
 }
 
-  ?>
+?>

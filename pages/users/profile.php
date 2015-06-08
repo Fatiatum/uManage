@@ -2,15 +2,19 @@
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/users.php');
 
-  if (!$_SESSION['username']) {
+  if (!$_SESSION['username'] && !$_SESSION['admin']) {
     $_SESSION['error_messages'][] = 'Undefined username';
     header("Location: $BASE_URL");
     exit;
   }
 
-  $username = $_SESSION['username'];
-  $user = getUser();
-  $projects = getUserProj();
+  if(isset($_SESSION['username']))
+    $username = $_SESSION['username'];
+  else
+    $username = $_GET['username'];
+
+  $user = getUser($username);
+  $projects = getUserProj($username);
 
   unset($user_photo);
   if (file_exists($BASE_DIR.'images/users/'.$user['username'].'.png'))
@@ -31,7 +35,6 @@
   }
 
   $smarty->assign('user',$user);
-  $smarty->assign('last_project_id', $projects[0]['id']);
   $smarty->assign('projects', $projects);
   $smarty->display('users/profile.tpl');
 ?>

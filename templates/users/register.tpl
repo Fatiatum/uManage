@@ -1,8 +1,11 @@
 {include file='common/header.tpl'}
 
 <?php 
-    if(isset($_SESSION['username'])){
+  if(isset($_SESSION['username'])){
     header("Location: $BASE_URL" . 'pages/users/profile.php');
+  }
+  else if(isset($_SESSION['admin'])){
+    header("Location: $BASE_URL" . 'pages/common/portfolio.php');
   }
 ?>
 

@@ -10,7 +10,18 @@ function createUser($name, $email, $username, $password) {
   $stmt->bindParam(':data', date("Y/m/d"));
   $stmt->execute();
 }
-
+function isAdminLogin($username, $password) {
+  global $conn;
+  $stmt = $conn->prepare("SELECT username, password FROM administrator WHERE username = :username AND password = :password");
+  $stmt->bindParam(':username', $username);
+  $stmt->bindParam(':password', $password);
+  $stmt->execute();
+  $rows = $stmt->fetch(PDO::FETCH_NUM);
+  if($rows>1){
+    return true;
+  }
+  return false;
+}
 function isLoginCorrect($username, $password) {
 
   global $conn;
@@ -48,22 +59,20 @@ function isLoginCorrect($username, $password) {
 
   }*/
 
-function getUser(){
+function getUser($username){
   global $conn;
-  $username = $_SESSION['username'];
   $stmt = $conn->prepare("SELECT * FROM users WHERE username= :username");
   $stmt->bindParam(':username', $username);
   $stmt->execute();
   return $stmt->fetch();
 }
 
-function getUserProj(){
+function getUserProj($username){
   global $conn;
-  $username = $_SESSION['username'];
   $stmt = $conn->prepare("SELECT name, description FROM project, users_project WHERE users_project.users_id=(SELECT users_id FROM users WHERE username=:username) AND users_project.project_id = project.project_id");
   $stmt->bindParam(':username', $username);
   $stmt->execute();
   return $stmt->fetchAll();
 }
 
-  ?>
+?>

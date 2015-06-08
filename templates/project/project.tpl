@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header" style="padding-left:3%; font-size:250%;">
-        $project.name
+        {$project['name']}
         <div class="btn-group">
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">New <span class="caret"></span></button>
             <ul class="dropdown-menu">
@@ -177,7 +177,7 @@
       <div class="col-sm-4">
         <div class="panel panel-red">
           <div class="panel-heading">
-            <h3 class="panel-title"> $tl 
+            <h3 class="panel-title"> ToDo
               <div class="btn-group" style="margin-left: 50.5%; margin-top:-3%;">
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" >New <span class="caret"></span></button>
             <ul class="dropdown-menu" style="margin-left:-175%">
@@ -194,27 +194,39 @@
           </div>
         </div>
       </div>
-
-      <div class="col-sm-4" style="padding-top: 5% ">
-        <div class="panel" style="background-color: #43bbf9;">
-          <div class="panel-heading">
-            <h3 class="panel-title"> New Task List
-              <div class="btn-group" style="margin-top:-3%;">
-            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" >New <span class="caret"></span></button>
-            <ul class="dropdown-menu" style="margin-left:-175%">
+      {foreach $tsklis as $list}
+      <div class="col-sm-4">
+      {if ($result[$list[0]["task_list_id"]] == "ToDo")} 
+      <div class="panel panel-red">
+      {else if ($result[$list[0]["task_list_id"]] == "In Progress" )}
+      <div class="panel panel-yellow">
+      {else if ($result[$list[0]["task_list_id"]] == "Done" )}
+      <div class="panel panel-green">
+      {else}
+      <div class="panel" style="background-color: #43bbf9;">
+      {/if}
+        <div class="panel-heading">
+          <h3 class="panel-title"> {$result[$list[0]["task_list_id"]]}
+            <div class="btn-group" style="margin-top:-4%; margin-left:40%;">
+            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="margin-letf:0.5%">New 
+              <span class="caret" ></span></button>
+            <ul class="dropdown-menu" style="margin-left:-170%;">
                 <li><a href="#">Task</a></li>
             </ul>
           </div>
-          <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2; margin-left:-3.5%;">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true" style="margin-left: 2.9%;"></span>
+          <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
         </a>
-            </h3>
-          </div>
-          <div class="panel-body">
-            Content
-          </div>
-        </div>
+          </h3>
+        </div>  
+            {foreach $list as $task}         
+            <div class="panel-body">
+              {$task["text"]}
+            </div>
+            {/foreach}
       </div>
+    </div>
+    {/foreach}
 
       <!-- Create new blank task list -->
     <div class="col-sm-4" style="padding-top: 5%">         
@@ -225,6 +237,9 @@
     </div>
 
   </div>
+      
+    </div>
+    <!-- /.container-fluid -->
 
   
     <!-- /.container-fluid -->

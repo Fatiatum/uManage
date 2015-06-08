@@ -64,23 +64,23 @@
 <section id="my_projects">
   <h2> My Projects
     <a id="plus" title="New Project" href="#new_proj" data-toggle="modal" >
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </a>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
   </h2>
   
- <div class="row">
-  {foreach $projects as $project}
-<div class="col-md-4 portfolio-item">
-                <h2>
-                  <img src="{$BASE_URL}{$project.photo}" class="img-circle">
-                <a href="{$BASE_URL}pages/projects/projects.php?name={$project.name}">{$project.name}</a>
+  <div class="row">
+    {foreach $projects as $project}
+    <div class="col-md-4 portfolio-item">
+      <h2>
+        <img src="{$BASE_URL}{$project.photo}" class="img-circle">
+        <a href="{$BASE_URL}pages/projects/projects.php?name={$project.name}">{$project.name}</a>
 
-                </h2>
-                
-                </a>
-            </div>
-  {/foreach}
+      </h2>
+      
+    </a>
   </div>
+  {/foreach}
+</div>
 
 </section>
 
