@@ -13,6 +13,9 @@
   </div><!-- /container -->
 </div><!-- /headerwrap -->
 
+
+
+
   <!-- Page Heading -->
   <div class="row">
     <div class="col-lg-12">
@@ -21,8 +24,8 @@
         <div class="btn-group">
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">New <span class="caret"></span></button>
             <ul class="dropdown-menu">
-                <li><a href="#">Task List</a></li>
-                <li><a href="#">Task</a></li>
+                <li><a href="#new_task_list" data-toggle="modal">Task List</a></li>
+                <li><a href="#new_blank_list" data-toggle="modal">Task</a></li>
             </ul>
         </div>
 
@@ -31,6 +34,96 @@
   </div>
   <!-- /.row -->
 </div>
+
+<!--Create new task list -->
+<div class="modal fade" id="new_task_list" role="dialog"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form class="form-horizontal" role="form" action="{$BASE_URL}actions/project/new_task_list.php" method="post">
+        <div class="modal-header">
+          <h3 id="modalLabel">Create New Task List</h3>
+        </div>
+        
+
+        <div class="modal-body" style="padding-bottom: 5%"> 
+          <div style="margin-bottom: 3%; margin-left: 80%;">*Required field </div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="proj-taskList" class="col-lg-2 control-label">*Name:</label>
+            <div class="col-lg-8" style="padding-left: 5%;">
+              <input id="name" name="name" type="text" class="col-md-8" placeholder="name" style="margin-top:1%;">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="proj-task" class="col-lg-2 control-label">Task:</label>
+            <div class="col-lg-8" style="padding-left: 5%;">
+              <input id="task" name="task" type="text" class="col-md-8" placeholder="task" style="margin-top:1%;">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="task_date" class="col-lg-2 control-label">Conclusion Date:</label>
+            <div class="col-lg-8" style="padding-left: 5%;">
+              <input id="task_date" name="task_date" type="text" class="col-md-8" placeholder="yyyy/mm/dd" style="margin-top:1%;">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">cancel</button>
+          <input name="sub" type="submit" class="btn btn-primary" value="submit">
+        </div>
+
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!--Create new blank task list -->
+<div class="modal fade" id="new_blank_list" role="dialog"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form class="form-horizontal" role="form" action="{$BASE_URL}actions/project/new_blank_list.php" method="post">
+        <div class="modal-header">
+          <h3 id="modalLabel">Create New Task</h3>
+        </div>
+        
+
+        <div class="modal-body" style="padding-bottom: 5%"> 
+          <div style="margin-bottom: 3%; margin-left: 80%;">*Required field </div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="proj-taskList" class="col-lg-2 control-label">*Name:</label>
+            <div class="col-lg-8" style="padding-left: 5%;">
+              <input id="name" name="name" type="text" class="col-md-8" placeholder="name" style="margin-top:1%;">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="task_date" class="col-lg-2 control-label">Conclusion Date:</label>
+            <div class="col-lg-8" style="padding-left: 5%;">
+              <input id="task_date" name="task_date" type="text" class="col-md-8" placeholder="yyyy/mm/dd" style="margin-top:1%;">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Cancel</button>
+          <input name="sub" type="submit" class="btn btn-primary" value="submit">
+        </div>
+
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
 
 <!-- /#wrapper -->
 <div id="projs-content">
@@ -85,14 +178,14 @@
         <div class="panel panel-red">
           <div class="panel-heading">
             <h3 class="panel-title"> $tl 
-              <div class="btn-group">
+              <div class="btn-group" style="margin-left: 50.5%; margin-top:-3%;">
             <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" >New <span class="caret"></span></button>
-            <ul class="dropdown-menu" >
+            <ul class="dropdown-menu" style="margin-left:-175%">
                 <li><a href="#">Task</a></li>
             </ul>
           </div>
           <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2;">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-remove" aria-hidden="true" style="margin-left: 2.9%;"></span>
         </a>
             </h3>
           </div>
@@ -102,7 +195,38 @@
         </div>
       </div>
 
+      <div class="col-sm-4" style="padding-top: 5% ">
+        <div class="panel" style="background-color: #43bbf9;">
+          <div class="panel-heading">
+            <h3 class="panel-title"> New Task List
+              <div class="btn-group" style="margin-top:-3%;">
+            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" >New <span class="caret"></span></button>
+            <ul class="dropdown-menu" style="margin-left:-175%">
+                <li><a href="#">Task</a></li>
+            </ul>
+          </div>
+          <a id="remove" title="New Project" href="#new_proj" data-toggle="modal" style="color: #f2f2f2; margin-left:-3.5%;">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true" style="margin-left: 2.9%;"></span>
+        </a>
+            </h3>
+          </div>
+          <div class="panel-body">
+            Content
+          </div>
+        </div>
+      </div>
+
+      <!-- Create new blank task list -->
+    <div class="col-sm-4" style="padding-top: 5%">         
+       <div class="tasks" style="border: 1px solid #000; ">
+            Content
+          </div>
+        
     </div>
+
+  </div>
+
+  
     <!-- /.container-fluid -->
 
   </div>
