@@ -123,7 +123,53 @@
 
   </div>
 </div>
+<!--Edit tasks modal -->
+<div class="modal fade" id="edit_task" role="dialog"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form class="form-horizontal" role="form" action="{$BASE_URL}actions/project/edit_task.php" method="post">
+        <div class="modal-header">
+          <h3 id="modalLabel">Edit Task</h3>
+        </div>
+        
 
+        <div class="modal-body" style="padding-bottom: 5%"> 
+          <div style="margin-bottom: 3%; margin-left: 80%;"></div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="proj-taskList" class="col-lg-2 control-label">New Name:</label>
+            <div class="col-lg-8" style="padding-left: 5%;">
+              <input id="name" name="name" type="text" class="col-md-8" placeholder="name" style="margin-top:1%;">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="task_date" class="col-lg-2 control-label">New Conclusion Date:</label>
+            <div class="col-lg-8" style="padding-left: 5%;">
+              <input id="task_date" name="task_date" type="text" class="col-md-8" placeholder="yyyy/mm/dd" style="margin-top:1%;">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="text-align: left; padding-left: 5%;" for="task" class="col-lg-2 control-label">Completed:</label>
+            <div class="col-lg-10">
+              <input id="public" name="public" type="checkbox" style="margin-left:3%; margin-top:2%;">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Cancel</button>
+          <input name="sub" type="submit" class="btn btn-primary" value="submit">
+        </div>
+
+
+      </form>
+    </div>
+
+  </div>
+</div>
 
 <!-- /#wrapper -->
 <div id="projs-content">
@@ -221,7 +267,7 @@
         </div>  
             {foreach $list as $task}         
             <div class="panel-body">
-              {$task["text"]}
+               <a href="#edit_task" data-toggle="modal">{$task["text"]}</a>
             </div>
             {/foreach}
       </div>
