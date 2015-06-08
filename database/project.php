@@ -119,4 +119,26 @@ function getProjs($string){
   return $query->fetchAll();
 }
 
+function removeTaskList($name){
+  global $conn;
+  $stmt = $conn->prepare("DELETE FROM task_list WHERE name=:name");
+  $stmt->bindParam(':name', $name);
+  $stmt->execute();
+  return true;
+}
+function removeTask($task_id){
+  global $conn;
+  $stmt = $conn->prepare("DELETE FROM task WHERE task_id=:task_id");
+  $stmt->bindParam(':task_id', $task_id);
+  $stmt->execute();
+  return true;
+}
+
+function getTaskListIds(){
+  global $conn;
+  $stmt = $conn->prepare("SELECT task_list_id FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id");
+  $stmt->bindParam(':task_id', $task_id);
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
 ?>
