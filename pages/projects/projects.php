@@ -7,7 +7,7 @@
     header("Location: $BASE_URL");
     exit;
   }
-
+/*
   $project_name=$_GET["name"];
   $project = getProjInfo($project_name);
   $tasksInLists = getTaskList($project_name);
@@ -27,7 +27,7 @@
   }
   $smarty->assign('tasks', $tasks);
   $smarty->assign('project',$project);
-  $smarty->assign('taskLists',$taskLists);
+  $smarty->assign('taskLists',$taskLists);*/
   $smarty->display('project/project.tpl');
   
 ?>
