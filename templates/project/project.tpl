@@ -1,52 +1,31 @@
-{include file='common/header.tpl'}
+
 
 <div id="wrapper">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
-    <!-- Top Menu Items -->
-    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul id="side-bar" class="nav navbar-nav side-nav">
-        <li class="active">
-          <a href="bootstrap-elements.html"><i class="icon-large icon-desktop"></i> Activity</a>
-        </li>
-        <li>
-          <a href="forum.html"><i class="icon-large icon-inbox"></i> Forum</a>
-        </li>
-        <li>
-          <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="icon-large icon-wrench"></i> Tools <i class="icon-large icon-caret"></i></a>
-          <ul id="demo" class="collapse">
-            <li>
-              <a href="#">Dropdown Item</a>
-            </li>
-            <li>
-              <a href="#">Dropdown Item</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </nav>
-
-  <!-- ========== HEADER SECTION ========== -->
-  <section id="home" name="home"></section>
-  <div id="portwrap">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-        </div>
+{include file='common/header.tpl'}
+<!-- ========== HEADER SECTION ========== -->
+<section id="home" name="home"></section>
+<div id="portwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
       </div>
-    </div><!-- /container -->
-  </div><!-- /headerwrap -->
+    </div>
+  </div><!-- /container -->
+</div><!-- /headerwrap -->
 
   <!-- Page Heading -->
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">
-        {$project.name}
+      <h1 class="page-header" style="padding-left:3%; font-size:250%;">
+        $project.name
+        <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">New <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Task List</a></li>
+                <li><a href="#">Task</a></li>
+            </ul>
+        </div>
+
       </h1>
     </div>
   </div>
@@ -56,35 +35,37 @@
 <!-- /#wrapper -->
 <div id="projs-content">
 
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-left:-15%; padding-bottom:10%;">
 
     <div class="col-sm-4">
       <div class="panel panel-green">
         <div class="panel-heading">
           <h3 class="panel-title">Done
-            <button type="button" id="plus-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <span class="caret"></span>
-            </button>
+           <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="margin-left: 270%;">New <span class="caret"></span></button>
+            <ul class="dropdown-menu" style="margin-left:100%;">
+                <li><a href="#">Task</a></li>
+            </ul>
+          </div>
           </h3>
-        </div>
-        <div  class="panel-body">
-          <div class="panel panel-default">
-            <div id="task" class="panel-heading">
-              <h3 class="panel-title">Task #1</h3>
-            </div>
+        </div>           
             <div class="panel-body">
               Description
             </div>
-          </div>
-        </div>
       </div>
     </div>
     <!-- /.col-sm-4 -->
     <div class="col-sm-4">
       <div class="panel panel-yellow">
         <div class="panel-heading">
-          <h3 class="panel-title">In Progress <button type="button" id="plus-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <span class="caret"></span></button></h3>
+          <h3 class="panel-title">In Progress 
+            <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="margin-left: 135%;">New <span class="caret"></span></button>
+            <ul class="dropdown-menu" style="margin-left:-40%;">
+                <li><a href="#">Task</a></li>
+            </ul>
+          </div>
+          </h3>
           </div>
           <div class="panel-body">
             Panel content
@@ -93,19 +74,23 @@
       </div>
       <!-- /.col-sm-4 -->
 
-      {foreach $taskLists as $tl}
       <div class="col-sm-4">
         <div class="panel panel-red">
           <div class="panel-heading">
-            <h3 class="panel-title"> $tl.
-              <button type="button" id="plus-btn" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <span class="caret"></span>
-              </button>
+            <h3 class="panel-title"> $tl 
+              <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="margin-left: 340%;">New <span class="caret"></span></button>
+            <ul class="dropdown-menu" style="margin-left:170%;">
+                <li><a href="#">Task</a></li>
+            </ul>
+          </div>
             </h3>
+          </div>
+          <div class="panel-body">
+            Content
           </div>
         </div>
       </div>
-      {/foreach}
 
     </div>
     <!-- /.container-fluid -->
