@@ -7,15 +7,20 @@ if(!isset($_SESSION['username'])){
  }
 
 
-if (!$_GET['task_id']) {
+if (!isset($_POST['text'])) {
     $_SESSION['error_messages'][] = 'Expected project name';
     $_SESSION['form_values'] = $_POST;
     header("Location: $BASE_URL" . 'pages/users/profile.php');
     exit;
 }
 
-createTask($_GET['task_id']);
-header("Location: $BASE_URL" . 'pages/projects/projects.php?name=' . $_GET['name']);
+$tl_id=getTaskListId($_GET['name'], "ToDo"); 
 
+
+if(isset($_POST['task_date']))
+	createTask($_GET['name'],$tl_id['task_list_id'], $_POST['task_date'], $_POST['text']);
+else
+	createTask($_GET['name'],$tl_id['task_list_id'], NULL, $_POST['text']);
+header("Location: $BASE_URL" . 'pages/projects/projects.php?name=' . $_GET['name']);
 
 ?>

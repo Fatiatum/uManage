@@ -32,22 +32,22 @@ function createProject($name, $descp, $visibility){
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':insert_date', date("Y/m/d"));
   $stmt->execute();
-  
+ 
 }
 
 function createTaskList($name,$listname, $conclusion_date){
   global $conn;
   
   //insert into task table 
-  $tsk = $conn->prepare("INSERT INTO task_list (project_id,name,begin_date,conclusion_date,concluded) VALUES ((SELECT project_id FROM project WHERE name=:name),:listname,:begin_date,:conclusion_date,false)");
-  $tsk->bindParam(':name', $name);
-  $tsk->bindParam(':listname', $listname);
-  $tsk->bindParam(':begin_date',date("Y/m/d"));
-  $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
-  $tsk->bindParam(':text', $text);
-  $tsk->execute();
+  $stmt = $conn->prepare("INSERT INTO task_list (project_id,name,begin_date,conclusion_date,concluded) VALUES ((SELECT project_id FROM project WHERE name=:name),:listname,:begin_date,:conclusion_date,'false')");
+  $stmt->bindParam(':name', $name);
+  $stmt->bindParam(':listname', $listname);
+  $stmt->bindParam(':begin_date',date("Y/m/d"));
+  $stmt->bindParam(':conclusion_date',$conclusion_date);
+  $stmt->execute();
+}
 
-  function createTask($name, $task_list_id,$conclusion_date,$text){
+function createTask($name, $task_list_id,$conclusion_date,$text){
   global $conn;
   
   //insert into task table 
@@ -55,9 +55,41 @@ function createTaskList($name,$listname, $conclusion_date){
   $tsk->bindParam(':name', $name);
   $tsk->bindParam(':task_list_id', $task_list_id);
   $tsk->bindParam(':begin_date',date("Y/m/d"));
-  $tsk->bindParam(':conclusion_date',date("Y/m/d")$conclusion_date);
+  $tsk->bindParam(':conclusion_date',$conclusion_date);
   $tsk->bindParam(':text', $text);
   $tsk->execute();
+}
+
+function addMember($username, $name){
+  global $conn;
+  $stmt = $conn->prepare("INSERT INTO users_project (project_id,users_id,insert_date) VALUES ((SELECT project_id FROM project WHERE name=:name),(SELECT users_id FROM users WHERE username=:username),:insert_date) ");
+  $stmt->bindParam(':username', $username);
+  $stmt->bindParam(':name', $name);
+  $stmt->bindParam(':insert_date', date("Y/m/d"));
+  $stmt->execute();
+
+}
+
+function removeMember($username, $name){
+  global $conn;
+  $stmt = $conn->prepare("DELETE FROM users_project WHERE users_project.project_id= (SELECT project_id FROM project WHERE name=:name)AND users_project.users_id= (SELECT users_id FROM users WHERE username=:username)");
+  $stmt->bindParam(':username', $username);
+  $stmt->bindParam(':name', $name);
+  $stmt->execute();
+  return true;
+}
+
+function isCoordenator($username){
+ global $conn;
+ $stmt = $conn->prepare( "SELECT coordenator_id FROM project,(SELECT users_id FROM users WHERE username=:username) AS iduser WHERE iduser.users_id=project.coordenator_id");
+ $stmt->bindParam(':username', $username);
+ $stmt->execute();
+ $rows = $stmt->fetch(PDO::FETCH_NUM);
+if($rows>1){
+   return true;
+ }
+ return false;
+}
 ////////////////////////////////////////////////////////GETS/////////////////////////////////////////////////////////////
   //get projects info
 function getProjInfo($name){
@@ -66,6 +98,14 @@ function getProjInfo($name){
   $stmt = $conn->prepare("SELECT * FROM project,(SELECT project_id FROM users_project,(SELECT users_id FROM users WHERE username=:username) AS iduser WHERE iduser.users_id=users_project.users_id) AS projid WHERE name=:name AND projid.project_id=project.project_id");
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':username', $username);
+  $stmt->execute();
+  return $stmt->fetch();
+}
+
+function getAllProj($name){
+  global $conn;
+  $stmt = $conn->prepare("SELECT * FROM project WHERE name=:name");
+  $stmt->bindParam(':name', $name);
   $stmt->execute();
   return $stmt->fetch();
 }
@@ -96,12 +136,22 @@ function getTaskList($name){
   $stmt->execute();
   return $stmt->fetchAll();
 }
-  
+
+ //get task lists from project
+function getTaskListId($projname, $name){
+  global $conn;
+  $stmt = $conn->prepare("SELECT task_list_id FROM task_list,(SELECT project_id FROM project WHERE name=:projname) AS idproj WHERE task_list.project_id=idproj.project_id AND task_list.name=:name");
+  $stmt->bindParam(':projname', $projname);
+  $stmt->bindParam(':name', $name);
+  $stmt->execute();
+  return $stmt->fetch();
+}
+
 
 function getProjects(){
-global $conn;
+  global $conn;
   $username = $_SESSION['username'];
-  $stmt = $conn->prepare("SELECT name, description FROM project, users_project WHERE (users_project.users_id=(SELECT users_id FROM users WHERE username=:username) AND users_project.project_id = project.project_id) OR project.public = 'true'");
+  $stmt = $conn->prepare("SELECT name FROM project, users_project WHERE (users_project.users_id=(SELECT users_id FROM users WHERE username=:username) AND users_project.project_id = project.project_id)");
   $stmt->bindParam(':username', $username);
   $stmt->execute();
   return $stmt->fetchAll();
@@ -111,13 +161,6 @@ function getProjs($string){
   $query = $conn->prepare("SELECT * FROM project WHERE name LIKE ? AND (users_project.project_id = project.project_id OR project.public = 'true')");
   $query->execute(array('%' . $string . '%'));
   return $query->fetchAll();
-}
-function getTaskListIds(){
-  global $conn;
-  $stmt = $conn->prepare("SELECT task_list_id FROM task,(SELECT project_id FROM project WHERE name=:name) AS idproj WHERE task.project_id=idproj.project_id");
-  $stmt->bindParam(':task_id', $task_id);
-  $stmt->execute();
-  return $stmt->fetchAll();
 }
 /////////////////////////////////////////////////REMOVES///////////////////////////////////////////////////////////////
 function removeTaskList($name){

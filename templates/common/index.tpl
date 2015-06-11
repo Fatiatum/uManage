@@ -38,17 +38,14 @@
       <div class="col-lg-4">
         <img src="{$BASE_URL}images/assets/ideia.png">
         <h4>ORGANIZE uR IDEIAS</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
       <div class="col-lg-4">
         <img src="{$BASE_URL}images/assets/work.png">
         <h4>DIVIDE uR WORK</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
       <div class="col-lg-4">
         <img src="{$BASE_URL}images/assets/deadline.png">
         <h4>MANAGE uR TIME</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
       </div>
 
     </div>
@@ -66,88 +63,22 @@
       <!--CAROUSEL-->
       <div class="container">
         <div class="col-md-12">
-          <div id="myCarousel" class="carousel slide">
 
-            <!-- Carousel items -->
-            <div class="carousel-inner">
               <div class="item active">
                 <div  class="row">
+                {foreach $projects as $proj}
                   <div  class="col-sm-4">
                     <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      <img src="{$BASE_URL}images/assets/default_user.jpg"   class="img-circle" class="img-responsive">
+                      <h3>{$proj['name']}</h3>
+                      <p>{$proj['description']}</p>
                     </a>
-                  </div>
-                  <div class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
-                  <div class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
                 </div>
-                <!--/row-->
-              </div>
-              <!--/item-->
-              <div class="item">
-                <div  class="row">
-                  <div  class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
-                  <div class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
-                  <div class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
-                </div>
-                <!--/row-->
-              </div>
-              <!--/item-->
-              <div class="item">
-                <div  class="row">
-                  <div  class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
-                  <div class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
-                  <div class="col-sm-4">
-                    <a id = "carous" href="#x" class="thumbnail">
-                      <img src="http://placehold.it/250x250" alt="Image" class="img-responsive">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </a>
-                  </div>
-                </div>
+                {/foreach}
                 <!--/row-->
               </div>
               <!--/item-->
             </div>
-            <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-          </div>
-          <!--/myCarousel-->
-        </div>
       </div>
       <!--/CAROUSEL-->
     </div>

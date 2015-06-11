@@ -26,6 +26,9 @@ $photo = $_FILES['photo'];
 // /*
 try {
 	createProject($name, $description, $public);
+  	createTaskList($name, "Done", NULL);
+ 	createTaskList($name, "In Progress", NULL);
+ 	createTaskList($name, "ToDo", NULL);
     move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $username . '.' . $extension); // this is dangerous
     chmod($BASE_DIR . "images/users/" . $username . '.' . $extension, 0644);
 } catch (PDOException $e) {
@@ -38,7 +41,8 @@ try {
 	header("Location: $BASE_URL" . 'pages/users/register.php');
 	exit;
 }
+
 $_SESSION['success_messages'][] = 'Project created successfully';
-header("Location: $BASE_URL" . 'pages/users/profile.php');
+header("Location: $BASE_URL" . 'pages/projects/projects.php?name=' . $name);
 
 ?>

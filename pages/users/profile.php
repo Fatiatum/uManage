@@ -7,11 +7,16 @@
     header("Location: $BASE_URL");
     exit;
   }
+  
+  if(isset($_SESSION['admin'])){
+    header("Location: $BASE_URL" . 'pages/common/portfolio.php');
+  }
 
   if(isset($_SESSION['username']))
     $username = $_SESSION['username'];
-  else
+  else{
     $username = $_GET['username'];
+  }
 
   $user = getUser($username);
   $projects = getUserProj($username);
